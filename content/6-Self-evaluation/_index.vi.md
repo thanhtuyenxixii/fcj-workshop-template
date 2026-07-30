@@ -1,56 +1,54 @@
 ---
-title: "Tự đánh giá"
+title: "Tự Đánh Giá"
 date: 2024-01-01
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-## Tự đánh giá
+## Tự Đánh Giá Cá Nhân
 
-Trong thời gian thực tập tại **Amazon Web Services Viet Nam Company Limited** trong chương trình **Workforce Bootcamp - First Cloud AI Journey** từ **01/06/2026 đến 23/08/2026**, tôi có cơ hội tìm hiểu các dịch vụ AWS, tham gia các sự kiện kỹ thuật và xây dựng project cá nhân tên là **Xây dựng và triển khai hệ thống đánh giá chất lượng và rủi ro cho AI Coding Agent trên AWS SageMaker**.
+Trong kỳ thực tập tại **Công ty TNHH Amazon Web Services Việt Nam** thuộc chương trình **Workforce Bootcamp - First Cloud AI Journey** (từ **01/06/2026 đến 23/08/2026**), mình đã tập trung nghiên cứu hệ sinh thái AWS, chủ động tham gia các hội thảo công nghệ và tự tay xây dựng dự án **Hệ thống Tự động hóa Đánh giá Rủi ro cho AI Coding Agent trên AWS SageMaker**.
 
-Kỳ thực tập giúp tôi kết nối kiến thức đã học ở trường với một workflow cloud và AI thực tế hơn. SageMaker Training quota không khả dụng tại `ap-southeast-1`, nên một local artifact trước đó hỗ trợ historical serving tại Region này. Sau khi quota cho `1 x ml.m5.large` được duyệt tại `us-east-1`, tôi hoàn tất managed Training, held-out Evaluation, Experiments/HPO, Pipeline, Model Registry và Model Monitor acceptance, đồng thời giữ evidence cho Processing, Endpoint, Lambda, API Gateway, Data Capture, IAM và CloudWatch.
+Trải nghiệm này giúp mình thực sự kết nối lý thuyết học đường với quy trình Cloud & MLOps thực tế trong doanh nghiệp. Dù ban đầu gặp khó khăn về giới hạn tài nguyên (quota) dịch vụ SageMaker Training tại vùng `ap-southeast-1` (phải tạm thời dùng mô hình cục bộ để làm mốc so sánh), mình đã chủ động xin cấp phát thành công tài nguyên `ml.m5.large` tại vùng `us-east-1`. Nhờ đó, mình đã hoàn thành trọn vẹn quy trình Managed Training, HPO, SageMaker Pipelines, Model Registry và Model Monitor, đồng thời xây dựng hoàn chỉnh hệ thống phụ trợ gồm SageMaker Processing, Endpoint thời gian thực, AWS Lambda, API Gateway, Data Capture, phân quyền IAM và giám sát CloudWatch.
 
-Về thái độ làm việc, tôi tự triển khai cá nhân nhưng vẫn học hỏi qua thảo luận nhóm, tài liệu AWS, workshop và các sự kiện cộng đồng. Tôi tập trung hoàn thành governed workflow, thu thập durable evidence, cleanup paid resources, xây dựng workshop website song ngữ và trình bày limitation minh bạch.
+Về thái độ làm việc, mình luôn giữ tinh thần tự lập, tích cực trao đổi với nhóm, nghiên cứu kỹ tài liệu AWS chính thức và học hỏi từ các sự kiện cộng đồng. Mình luôn chú trọng hoàn thiện quy trình quản trị, thu thập minh chứng minh bạch, thực hiện dọn dẹp tài nguyên để tối ưu chi phí, hoàn thiện trang web báo cáo song ngữ và tự đánh giá các điểm hạn chế của mô hình một cách khách quan.
 
-## Bảng tiêu chí tự đánh giá
+## Bảng Tiêu Chí Đánh Giá
 
-| STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình |
-|---|---|---|---|---|---|
-| 1 | **Kiến thức và kỹ năng chuyên môn** | Hiểu AWS services, ML workflow, API integration và áp dụng kiến thức kỹ thuật vào project | ✅ | ☐ | ☐ |
-| 2 | **Khả năng học hỏi** | Có khả năng học AWS services mới, đọc documentation, thử command và rút kinh nghiệm từ lỗi | ✅ | ☐ | ☐ |
-| 3 | **Tính chủ động** | Chủ động chọn topic thực tế, xác định MVP scope và thu thập evidence | ✅ | ☐ | ☐ |
-| 4 | **Tinh thần trách nhiệm** | Hoàn thành các phần project, ghi rõ limitation và chú ý cleanup để kiểm soát chi phí | ✅ | ☐ | ☐ |
-| 5 | **Kỷ luật** | Bám theo timeline thực tập, duy trì worklog theo tuần và tổ chức deliverables | ☐ | ✅ | ☐ |
-| 6 | **Tinh thần cầu tiến** | Sẵn sàng tiếp nhận feedback, sửa nội dung, cải thiện diagrams và cập nhật cấu trúc báo cáo | ✅ | ☐ | ☐ |
-| 7 | **Giao tiếp** | Trình bày mục tiêu project, AWS architecture, limitations và kết quả bằng tiếng Anh và tiếng Việt | ☐ | ✅ | ☐ |
-| 8 | **Làm việc nhóm** | Tham gia học tập theo nhóm, thảo luận và sự kiện cộng đồng trong khi vẫn hoàn thành phần cá nhân | ☐ | ✅ | ☐ |
-| 9 | **Tác phong chuyên nghiệp** | Tôn trọng môi trường học tập, quy định tham gia sự kiện, yêu cầu báo cáo và sử dụng AWS có trách nhiệm | ✅ | ☐ | ☐ |
-| 10 | **Kỹ năng giải quyết vấn đề** | Xử lý blocker như quota limitation, API integration issues và thu thập evidence sau cleanup | ✅ | ☐ | ☐ |
-| 11 | **Đóng góp cho project/team** | Xây dựng MVP workflow hoàn chỉnh và chuẩn bị report theo dạng workshop có thể tái sử dụng | ✅ | ☐ | ☐ |
-| 12 | **Đánh giá tổng thể** | Đánh giá chung về thái độ học tập, kết quả project và chất lượng documentation trong kỳ thực tập | ✅ | ☐ | ☐ |
+| STT | Tiêu chí đánh giá | Mô tả chi tiết | Tốt | Khá | Trung bình |
+|:---:|:---|:---|:---:|:---:|:---:|
+| 1 | **Kiến thức & Kỹ năng chuyên môn** | Nắm vững các dịch vụ AWS, quy trình MLOps, tích hợp API và áp dụng hiệu quả vào dự án | ✅ | ☐ | ☐ |
+| 2 | **Khả năng tự nghiên cứu** | Chủ động học các dịch vụ AWS mới, đọc tài liệu kỹ thuật, chạy thử câu lệnh và tự sửa lỗi | ✅ | ☐ | ☐ |
+| 3 | **Tính chủ động trong công việc** | Tự chọn đề tài thực tế, xác định phạm vi MVP rõ ràng và chủ động thu thập minh chứng | ✅ | ☐ | ☐ |
+| 4 | **Tinh thần trách nhiệm** | Hoàn thành đầy đủ các phần của dự án, minh bạch các hạn chế và luôn có ý thức tối ưu chi phí | ✅ | ☐ | ☐ |
+| 5 | **Tính kỷ luật** | Tuân thủ lịch trình thực tập, cập nhật worklog hàng tuần và sắp xếp sản phẩm chỉn chu | ☐ | ✅ | ☐ |
+| 6 | **Tư duy cầu tiến** | Sẵn sàng lắng nghe góp ý, chỉnh sửa nội dung, cải thiện sơ đồ và cập nhật cấu trúc báo cáo | ✅ | ☐ | ☐ |
+| 7 | **Kỹ năng giao tiếp** | Trình bày rõ ràng mục tiêu dự án, kiến trúc AWS, hạn chế và kết quả bằng cả tiếng Việt và tiếng Anh | ☐ | ✅ | ☐ |
+| 8 | **Làm việc nhóm** | Tích cực trao đổi nhóm, tham gia sự kiện cộng đồng trong khi vẫn hoàn thành tốt phần việc cá nhân | ☐ | ✅ | ☐ |
+| 9 | **Tác phong chuyên nghiệp** | Tác phong chuẩn mực, tham gia sự kiện đúng giờ, tuân thủ quy định và sử dụng tài nguyên AWS an toàn | ✅ | ☐ | ☐ |
+| 10 | **Kỹ năng giải quyết vấn đề** | Xử lý tốt các rào cản kỹ thuật như giới hạn quota, tích hợp API và lưu trữ minh chứng sau cleanup | ✅ | ☐ | ☐ |
+| 11 | **Đóng góp cho dự án/nhóm** | Xây dựng thành công hệ thống MVP hoàn chỉnh và chuẩn bị bộ tài liệu hướng dẫn dạng Workshop | ✅ | ☐ | ☐ |
+| 12 | **Đánh giá chung** | Đánh giá tổng thể về thái độ học hỏi, kết quả dự án và chất lượng tài liệu trong kỳ thực tập | ✅ | ☐ | ☐ |
 
-## Điểm mạnh
+## Điểm Mạnh
 
-- **Khả năng tự học:** Tôi có thể tự tìm hiểu AWS services thông qua documentation, tutorials, CLI checks, screenshots và triển khai thực tế.
-- **Triển khai kỹ thuật:** Tôi hoàn tất managed AWS ML/MLOps path từ trajectories và Processing đến Training, held-out Evaluation, Experiments/HPO, Pipeline, conditional Registry registration, historical serving và monitoring acceptance.
-- **Governance:** Gate `risky_recall >= 0.85` chỉ cho phép registration; Registry versions `/1` và `/2` vẫn `PendingManualApproval`, còn human review cùng deterministic safety rules giữ quyền quyết định.
-- **Observability và cost control:** Tôi nghiệm thu Data Capture, Model Monitor, CloudWatch metrics, một dashboard và bảy actions-disabled alarms, sau đó xác minh cleanup short-lived paid resources.
-- **Đánh giá trung thực:** Tôi test frozen model local trên 40 external trajectories và báo cáo macro F1 giảm từ synthetic `1.00` xuống external `0.1212`, thay vì xem perfect held-out scores là production quality.
-- **Documentation dựa trên bằng chứng:** Tôi giữ screenshots, source evidence, S3 artifacts, reports, API responses, monitoring records và cleanup notes mà không công bố raw external trajectories.
+- **Năng lực tự học cao:** Có khả năng tự nghiên cứu các dịch vụ AWS qua tài liệu chính thức, chạy kiểm thử bằng AWS CLI, xử lý lỗi phát sinh và thực thi hệ thống thực tế.
+- **Triển khai kỹ thuật hoàn chỉnh:** Xây dựng thành công luồng MLOps chuẩn quản lý trên AWS từ khâu xử lý dữ liệu (Processing), huấn luyện (Training), tối ưu siêu tham số (HPO), đánh giá mô hình, tự động hóa bằng Pipeline, đăng ký mô hình (Model Registry) đến triển khai Endpoint và giám sát (Model Monitor).
+- **Tư duy quản trị & Bảo mật (Governance):** Cấu hình cổng kiểm duyệt chất lượng (`risky_recall >= 0.85`) cho bước đăng ký mô hình; các phiên bản mô hình luôn cần bước duyệt thủ công (Manual Approval) và giữ nguyên các quy tắc bảo mật cứng để đảm bảo an toàn tuyệt đối.
+- **Giám sát & Tối ưu chi phí:** Triển khai thành công Data Capture, Model Monitor, CloudWatch Metrics/Alarms và Dashboard giám sát; thực hiện xóa bỏ các tài nguyên tính phí ngay sau khi hoàn tất kiểm thử.
+- **Đánh giá khoa học & Trung thực:** Chủ động kiểm thử mô hình trên dữ liệu thực tế bên ngoài (Out-Of-Distribution) và báo cáo minh bạch sự giảm sút chỉ số chứ không chỉ dựa vào kết quả hoàn hảo trên dữ liệu giả lập.
+- **Tài liệu hóa dựa trên minh chứng:** Lưu trữ đầy đủ hình ảnh màn hình, file log, S3 artifacts, kết quả API và lịch sử dọn dẹp tài nguyên một cách chỉn chu.
 
-## Điểm cần cải thiện
+## Điểm Cần Cải Thiện
 
-- **Sự tự tin khi giao tiếp:** Tôi cần tiếp tục cải thiện cách trình bày technical trade-offs bằng lời nói, đặc biệt khi giải thích AWS architecture và limitations cho người khác.
-- **Quản lý thời gian:** Tôi cần lên kế hoạch documentation và screenshot collection sớm hơn, tránh để quá nhiều phần chỉnh sửa báo cáo vào cuối kỳ.
-- **Dữ liệu evaluation:** External pilot chỉ có 40 mẫu, chỉ hai mẫu mang nhãn risky và AI-assisted labels có full-axis agreement `7.5%`; tôi cần dataset đại diện lớn hơn với independent human annotation.
-- **Độ tin cậy của parser và runtime:** Tôi cần review missing-field/default-value behavior và pin runtime tương thích thay vì phụ thuộc LabelEncoder được tạo bằng scikit-learn `0.24.1` nhưng load dưới `1.8.0`.
-- **Đánh giá model:** Chỉ nên cân nhắc calibration hoặc cost-sensitive learning sau khi có human-labeled data tốt hơn, tiếp theo là governed evaluation và reviewed release sau manual Registry approval.
-- **Viết kỹ thuật bằng tiếng Anh:** Tôi cần tiếp tục cải thiện technical writing để báo cáo ngắn gọn, chính xác và tự nhiên hơn ở cả tiếng Anh và tiếng Việt.
+- **Trình bày kỹ thuật tự tin hơn:** Cần tiếp tục rèn luyện cách giải thích ngắn gọn các đánh đổi về mặt kiến trúc (Architecture trade-offs) khi trình bày trực tiếp.
+- **Quản lý thời gian lưu minh chứng:** Cần phân bổ việc chụp ảnh màn hình và lưu giữ log rải đặn theo từng tuần thay vì dồn vào giai đoạn hoàn thiện báo cáo cuối kỳ.
+- **Mở rộng dữ liệu kiểm thử:** Tập dữ liệu kiểm thử bên ngoài hiện tại vẫn còn khiêm tốn; cần xây dựng tập dữ liệu lớn hơn với sự gán nhãn độc lập từ chuyên gia.
+- **Đồng bộ môi trường Runtime:** Cần đồng nhất phiên bản các thư viện giữa môi trường huấn luyện và môi trường Endpoint để tránh các cảnh báo bất tương thích phiên bản.
 
-## Nhận xét tổng quan
+## Nhìn Nhận Tổng Kết
 
-Kỳ thực tập giúp tôi hiểu rằng một cloud AI project không chỉ là train model. Một workflow hoàn chỉnh còn bao gồm thiết kế dữ liệu, cấu trúc lưu trữ, IAM permissions, processing jobs, model packaging, endpoint deployment, API integration, logs, cost control, cleanup và documentation.
+Kỳ thực tập này giúp mình nhận ra rằng một dự án Cloud AI thực tế không chỉ đơn thuần là việc huấn luyện mô hình. Một giải pháp hoàn chỉnh đòi hỏi sự kết hợp chặt chẽ giữa thiết kế dữ liệu, phân quyền IAM, hạ tầng xử lý, triển khai API, giám sát vận hành, kiểm soát chi phí và đóng gói tài liệu chỉn chu.
 
-Bài học giá trị nhất là managed execution thành công không đồng nghĩa model có khả năng generalize. AWS workflow, governance, serving và monitoring evidence đã hoàn tất, nhưng External/OOD pilot local cho thấy khoảng cách lớn giữa synthetic và public trajectories. Báo cáo cả hai kết quả—đồng thời giữ rõ human review, hard rules, manual approval và cleanup boundaries—giúp tôi hình thành tư duy kỹ sư chuyên nghiệp hơn.
+Bài học lớn nhất mình rút ra là việc chạy thành công quy trình trên Cloud khác hoàn toàn với khả năng tổng quát hóa của mô hình trong thực tế. Việc hoàn thiện quy trình AWS MLOps song song với việc minh bạch các hạn chế của mô hình đã giúp mình định hình một tư duy kỹ sư Cloud/MLOps chuyên nghiệp và trách nhiệm hơn.
