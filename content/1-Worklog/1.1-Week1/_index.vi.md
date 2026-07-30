@@ -1,6 +1,6 @@
 ---
-title: "Tuần 1: Onboarding và nền tảng AWS"
-date: 2024-01-01
+title: "Tuần 1: Khởi động & Nền tảng AWS"
+date: 2026-06-01
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -8,79 +8,66 @@ pre: " <b> 1.1. </b> "
 
 ## 01/06/2026 - 07/06/2026
 
-**Hình thức làm việc:** Triển khai cá nhân kết hợp học tập và thảo luận theo nhóm.
+**Hình thức làm việc:** Tự thực hiện kết hợp thảo luận nhóm.
 **Chương trình:** Workforce Bootcamp - First Cloud AI Journey.
-**Mentor:** Không có mentor cố định; công việc được tự quản lý, kết hợp tài liệu, tutorial và thảo luận với các bạn học.
+**Người hướng dẫn (Mentor):** Tự quản lý tiến độ với sự hỗ trợ từ tài liệu AWS và cộng đồng.
 
 ## Mục tiêu
 
-Hiểu yêu cầu thực tập, thiết lập kế hoạch làm việc và xây dựng nền tảng AWS cần thiết trước khi chọn và triển khai project kỹ thuật.
+Nắm rõ yêu cầu thực tập, chọn đề tài dự án kỹ thuật và xây dựng kiến thức nền tảng AWS để chuẩn bị cho việc triển khai dự án.
 
 ## Bối cảnh
 
-Tuần đầu tiên chủ yếu dùng để chuyển từ bối cảnh học bootcamp tổng quát sang một định hướng thực tập cụ thể. Vì chương trình không có mentor cố định, cách làm việc cần được tự quản lý: xác định mục tiêu theo tuần, lưu bằng chứng và luôn bám yêu cầu báo cáo cuối kỳ ngay từ đầu.
+Tuần đầu tiên tập trung làm quen với lộ trình thực tập AWS First Cloud AI Journey. Do làm việc theo hình thức tự quản lý, việc xác định mục tiêu hàng tuần, lưu trữ minh chứng và dựng khung báo cáo Hugo được ưu tiên ngay từ đầu.
 
-## AWS services và kiến thức đã tìm hiểu
+## Trọng tâm học tập AWS
 
-Trước khi chọn hướng triển khai project, tôi dành tuần này để xây nền tảng về các khái niệm AWS cốt lõi. Mục tiêu là hiểu mỗi AWS service chịu trách nhiệm gì trước khi đưa chúng vào MVP cuối.
+- **AWS Global Infrastructure:** Nghiên cứu Region, Availability Zone và nhất quán chọn Region `ap-southeast-1`.
+- **AWS IAM & Bảo mật:** Ôn tập cấu trúc IAM Policy, Role, Trust Relationship và nguyên tắc phân quyền tối thiểu.
+- **Shared Responsibility Model:** Phân định trách nhiệm bảo mật giữa AWS và người dùng.
+- **Tổng quan S3 & CloudWatch:** Tìm hiểu lưu trữ theo Prefix trên S3 và cơ chế ghi log trên CloudWatch.
 
-- **AWS Global Infrastructure:** Tìm hiểu Region và Availability Zone để hiểu vì sao project nên dùng nhất quán một Region, đặc biệt là `ap-southeast-1`, cho S3, SageMaker, Lambda và API Gateway.
-- **AWS Identity and Access Management (IAM):** Rà soát users, roles, policies, trust relationships và nguyên tắc least privilege. Phần này quan trọng vì project về sau cần quyền riêng cho SageMaker và Lambda.
-- **Shared Responsibility Model:** Tìm hiểu phần trách nhiệm thuộc về AWS và phần thuộc về người dùng, nhất là credentials, IAM permissions, data access và cleanup resources.
-- **Amazon S3 concept:** Tìm hiểu buckets, objects, prefixes và use case lưu trữ để sau này tổ chức data thành raw, processed và model artifact locations.
-- **Amazon CloudWatch overview:** Rà soát CloudWatch như service dùng cho logs và operational visibility khi AWS managed jobs hoặc functions chạy.
-- **Initial AWS service mapping:** Liên kết project idea với service chain ban đầu: S3 cho storage, SageMaker cho ML workflow, Lambda/API Gateway cho API exposure, CloudWatch cho logs và IAM cho access control.
-
-Sau bước học này, tôi có đủ ngữ cảnh AWS để chọn project scope phù hợp với tài khoản AWS sinh viên và yêu cầu báo cáo thực tập.
-
-## Bảng công việc theo ngày
+## Chi tiết công việc hàng ngày
 
 | Ngày | Công việc đã thực hiện |
 |---|---|
-| 01/06/2026 | Rà soát yêu cầu thực tập và xác định toàn bộ các mục cần có trong báo cáo. |
-| 02/06/2026 | Tìm hiểu nền tảng AWS account, global infrastructure, Regions và Availability Zones. |
-| 03/06/2026 | Ôn IAM, shared responsibility và trách nhiệm bảo mật trong project AWS sinh viên. |
-| 04/06/2026 | So sánh các hướng project và chọn AI Coding Agent risk scoring làm hướng chính. |
-| 05/06/2026 | Phác thảo service map MVP ban đầu với S3, SageMaker, Lambda, API Gateway, CloudWatch và IAM. |
-| 06/06/2026 - 07/06/2026 | Tổ chức ghi chú, reference và evidence ban đầu cho Worklog và báo cáo cuối kỳ. |
+| 01/06/2026 | Nghiên cứu yêu cầu báo cáo thực tập và tạo cấu trúc thư mục Hugo. |
+| 02/06/2026 | Tìm hiểu hạ tầng toàn cầu AWS, thiết lập AWS CLI và AWS Budgets. |
+| 03/06/2026 | Ôn tập IAM, Shared Responsibility Model và phân quyền trên Cloud. |
+| 04/06/2026 | Chốt đề tài: Đánh giá rủi ro cho AI Coding Agent (Risk Scoring). |
+| 05/06/2026 | Phác thảo sơ đồ dịch vụ AWS MVP (S3, SageMaker, Lambda, API Gateway). |
+| 06/06/2026 - 07/06/2026 | Tổng hợp tài liệu tham khảo và lưu trữ minh chứng Tuần 1. |
 
+## Hoạt động kỹ thuật
 
-## Công việc kỹ thuật
+- Thiết lập môi trường phát triển cục bộ với VS Code, Git, AWS CLI và Hugo.
+- Xác định sơ đồ luồng dữ liệu: Log sự kiện Agent -> S3 -> SageMaker Model -> Lambda -> API Gateway.
 
-- Rà soát cấu trúc báo cáo yêu cầu và xác định output cuối cần có worklog, proposal, blogs, events, workshop, self-evaluation và feedback.
-- Ôn nền tảng AWS như Regions, Availability Zones, IAM, shared responsibility và sự khác nhau giữa storage, compute, networking, managed ML services.
-- So sánh các hướng project và chọn AI Coding Agent risk scoring vì kết hợp AI safety, software engineering evidence và AWS ML deployment.
-- Phác thảo service chain dự kiến: S3 lưu dữ liệu, SageMaker xử lý/host model, Lambda và API Gateway expose API, CloudWatch lưu log, IAM quản lý quyền.
+## Kết quả đạt được (Deliverables)
 
-## Deliverables
+- **Đã chốt đề tài thực tập.**
+- **Đã dựng xong khung báo cáo Hugo.**
+- **Đã phác thảo sơ đồ kiến trúc MVP.**
 
-- **Chọn được đề tài thực tập.**
-- **Tạo outline báo cáo ban đầu.**
-- **Xác định phạm vi học AWS.**
-- **Phác thảo service map MVP mức cao.**
+## Thách thức & Giải pháp
 
-## Khó khăn và cách xử lý
+**Thách thức:** Khoanh vùng phạm vi đề tài AI/Cloud sao cho vừa sức với tài khoản AWS Student.
 
-**Khó khăn:** Khó khăn chính là thu hẹp phạm vi AI/cloud rất rộng thành một project đủ thực tế với AWS account sinh viên.
+**Giải pháp:** Giới hạn MVP vào việc đánh giá rủi ro dựa trên log hành vi của AI Agent, đảm bảo tính khả thi cao.
 
-**Cách xử lý:** Phạm vi được giới hạn thành MVP trung thực: chấm điểm agent runs từ trajectory logs, demo AWS workflow và tách rõ phần đã triển khai với phần MLOps mở rộng trong tương lai.
+## Đóng góp cho Dự án
 
-## Liên hệ với project chính
+Đặt nền móng lý thuyết và kiến trúc để chuyển đổi bài toán đánh giá rủi ro AI Agent sang mô hình Cloud-native.
 
-Tuần này đóng góp vào MVP cuối bằng cách củng cố luồng từ **bằng chứng hành vi của AI coding agent** đến **workflow đánh giá rủi ro trên AWS**. Nội dung giúp workshop cuối không chỉ là giải thích khái niệm, mà còn bám theo đúng trình tự triển khai thực tế của project.
+## Hình ảnh minh chứng
 
-## Ảnh bằng chứng
+![Học tập nền tảng AWS](/images/worklog/week01-aws-foundation.png)
 
-![Trang học AWS Cloud Practitioner](/images/worklog/week01-aws-learning.png)
-
-Ảnh chụp thể hiện trang học AWS Cloud Practitioner được dùng làm điểm bắt đầu cho phần nền tảng AWS.
-
-## Bằng chứng và tài liệu tham khảo đã tìm hiểu
+## Tài liệu tham khảo
 
 - [AWS Cloud Practitioner Essentials](https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/)
-- [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
-- [IAM security best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+- [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 
 ---
 
-[Quay lại Worklog](/vi/1-worklog/) | [Tiếp](/vi/1-worklog/1.2-week2/)
+[Quay lại Worklog](/1-worklog/) | [Tuần tiếp theo](/1-worklog/1.2-week2/)
