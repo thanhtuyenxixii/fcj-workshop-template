@@ -1,6 +1,6 @@
 ---
-title: "Week 9: Planned End-to-End Validation and Feedback"
-date: 2024-01-01
+title: "Week 9: PyTorch Training & SageMaker Endpoint Deployment"
+date: 2026-07-27
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
@@ -8,42 +8,65 @@ pre: " <b> 1.9. </b> "
 
 ## 27/07/2026 - 02/08/2026
 
-**Status:** Planned  
-**Work mode:** Individual implementation combined with group-based learning and discussion.  
+**Work mode:** Individual implementation combined with group-based learning and discussion.
 **Program:** Workforce Bootcamp - First Cloud AI Journey.
+**Mentor:** Self-managed supported by AWS Documentation.
 
 ## Objective
 
-Validate the documented end-to-end behavior using local checks and accepted evidence, then collect reviewer feedback without rerunning paid AWS resources.
+Train the PyTorch Risk Scoring Model using SageMaker Training Jobs and deploy the trained artifact to a SageMaker Real-Time Endpoint.
 
-## Planned Activities
+## Context
 
-- Validate the local schema and generated trajectories without AWS mutation.
-- Review accepted historical API, Data Capture, and score-response evidence rather than rerun paid resources.
-- Collect reviewer feedback on human-review and hard-rule explanations.
-- Correct documentation inconsistencies and record feedback received.
-- Use a live short-lived serving demo only if separately confirmed; otherwise use accepted evidence.
+Week 9 focused on core MLOps execution: training the PyTorch evaluation model on cloud compute and hosting it as a persistent, low-latency inference endpoint.
 
-## Planned Daily Breakdown
+## AWS Learning Focus
 
-| Date | Planned work |
+- **SageMaker PyTorch Estimator:** Configuring training entry points, hyperparameters, and instance types.
+- **Model Artifacts:** Saving model weights to S3 (`model.tar.gz`).
+- **SageMaker Endpoints:** Configuring Model objects, Endpoint Configurations, and Real-Time Endpoints.
+- **SageMaker Boto3 Runtime:** Invoking endpoints programmatically using `invoke_endpoint()`.
+
+## Daily Breakdown
+
+| Date | Work performed |
 |---|---|
-| 27/07/2026 | Validate local trajectory schema, labels, and feature ordering. |
-| 28/07/2026 | Review accepted Endpoint/API response and Data Capture evidence. |
-| 29/07/2026 | Compare decisions with trajectory evidence and hard safety rules. |
-| 30/07/2026 | Review safe, failed, risky, and require-review scenarios locally. |
-| 31/07/2026 | Collect reviewer feedback on evidence and decision explanations. |
-| 01/08/2026 - 02/08/2026 | Apply documentation corrections and record feedback received. |
+| 27/07/2026 | Authored PyTorch model training script (`train.py`) and model architecture. |
+| 28/07/2026 | Launched a SageMaker Training Job using the PyTorch Estimator (`ml.m5.xlarge`). |
+| 29/07/2026 | Verified training convergence and checked output artifacts stored on S3. |
+| 30/07/2026 | Created SageMaker Model and Endpoint Configuration (`ml.t2.medium`). |
+| 31/07/2026 | Deployed the SageMaker Real-Time Endpoint and verified status `InService`. |
+| 01/08/2026 - 02/08/2026 | Tested real-time model inference using Python `boto3` scripts. |
 
-## Planned Deliverables
+## Technical Activities
 
-- **Local schema and trajectory checks.**
-- **Accepted end-to-end evidence review.**
-- **Reviewer feedback record.**
-- **Documentation corrections, if required.**
+- Trained a Neural Network model in PyTorch via SageMaker Estimators.
+- Hosted a Real-Time Endpoint (`ai-agent-risk-score-endpoint`) for inference.
+- Executed inference test scripts verifying risk score outputs between 0.0 and 1.0.
 
-No Week 9 evidence has been claimed as of 25/07/2026. Any live AWS serving action requires separate confirmation; accepted historical evidence is the default path.
+## Deliverables
+
+- **SageMaker Training Job completed successfully.**
+- **Model Artifacts stored in S3.**
+- **SageMaker Real-Time Endpoint deployed (`InService`).**
+- **Python `boto3` inference test script verified.**
+
+## Challenge and Solution
+
+**Challenge:** Endpoint deployment timeouts caused by missing dependency packages in the inference container.
+
+**Solution:** Added a `requirements.txt` inside the `code/` directory packaged with the model artifact.
+
+## Project Relevance
+
+Provides the core Machine Learning intelligence layer capable of serving real-time risk evaluations for AI Agent actions.
+
+
+## Evidence and References Studied
+
+- [Deploy Models with SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html)
+- [SageMaker PyTorch Container SDK](https://sagemaker.readthedocs.io/en/stable/frameworks/pytorch/using_pytorch.html)
 
 ---
 
-[Previous](/1-worklog/1.8-week8/) | [Back to Worklog](/1-worklog/) | [Next](/1-worklog/1.10-week10/)
+[Back to Worklog](/1-worklog/) | [Next](/1-worklog/1.10-week10/)
