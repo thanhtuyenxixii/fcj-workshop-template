@@ -8,125 +8,130 @@ pre: " <b> 4.1. </b> "
 
 ## Event 1: FiRST CLOUD JOURNEY Community Day
 
-| Field | Information |
+| Attribute | Details |
 |---|---|
-| Event name | FiRST CLOUD JOURNEY Community Day |
-| Date and time | 09:00, 06/06/2026 |
-| Location | 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City |
-| Role | Attendee |
-| Registration purpose | Attend Events |
-| Work shift | Fulltime |
-| Registered participant | Chu Nguyễn Tuấn Anh |
-| University | Trường Đại học Bách khoa |
-| Student ID | 2352022 |
+| Event Name | FiRST CLOUD JOURNEY Community Day |
+| Date & Time | 09:00 AM, June 06, 2026 |
+| Venue | 26th Floor, Bitexco Financial Tower, 02 Hai Trieu, Saigon Ward, Ho Chi Minh City |
+| Attending Role | Participant |
+| Objective | Tech Knowledge Exchange & Networking |
+| Work Shift | Full-time |
+| Participant Name | Bùi Thanh Tuyền |
+| Academic Institution | Ho Chi Minh City University of Technology (HCMUT) |
+| Student ID | 2353284 |
 
 ## Overview
 
-The **FiRST CLOUD JOURNEY Community Day** was a community learning event that brought together speakers from system administration, cloud-native development, cybersecurity, game development, project teamwork, and artificial intelligence. The event was valuable because it did not focus on only one isolated technology. Instead, it showed how cloud, DevOps, security, GenAI, teamwork, and real-world engineering experience connect in modern technology projects.
+The **FiRST CLOUD JOURNEY Community Day** provided an interactive platform where technical experts and learners gathered to explore multiple technology domains, ranging from DevOps, cloud infrastructure, and cybersecurity to game engineering, soft skills, and Generative AI. What made this gathering stand out was its holistic ecosystem perspective: rather than analyzing technologies in isolation, the sessions illustrated how modern software applications integrate cloud infrastructure, automated pipelines, security mechanisms, and AI models into a cohesive production environment.
 
-As an attendee, I joined the event to learn from practical stories and technical sharing sessions. The sessions helped me broaden my view beyond my internship project and understand how different AWS and cloud-native ideas can be applied in production-like scenarios.
+By participating in this community event, I gained valuable practical insights directly from industry practitioners. These real-world perspectives expanded my technical mindset beyond the scope of my daily internship assignments, offering clear examples of how enterprise-grade AWS solutions and cloud-native practices are engineered in real-world environments.
 
-## Speakers and Topics
+## Speaker Lineup & Discussion Topics
 
-The event included several speakers with different backgrounds:
+The conference featured an array of seasoned speakers addressing various specialized areas:
 
-| Speaker | Topic Area |
+| Speaker | Primary Focus Area |
 |---|---|
-| Trần Trung Vinh | Career journey from IT Helpdesk to Senior Sysadmin, Cloud, and DevOps |
-| Trương Huy Phước | Project management mindset and effective teamwork |
-| Bảo Huỳnh | Docker and cloud-native application packaging |
-| Lê Hoàng Gia Đại | AWS WAF and ML-based Network Intrusion Detection System |
-| Nguyễn Quốc Bảo | Multiplayer game development with AWS WebSockets and Godot 4 |
-| Việt Phát | GraphRAG with Generative AI, Amazon Bedrock, and Amazon Neptune |
+| Trần Trung Vinh | Career progression from Helpdesk Operations to Cloud & DevOps Specialist |
+| Trương Huy Phước | Modern project execution mindsets and dynamic team collaboration |
+| Bảo Huỳnh | Containerization fundamentals and application delivery with Docker |
+| Lê Hoàng Gia Đại | Next-gen Network Security combining AWS WAF with ML-driven Intrusion Detection |
+| Nguyễn Quốc Bảo | Building real-time multiplayer games using Godot 4 and AWS WebSocket services |
+| Việt Phát | Advanced GraphRAG architectures utilizing Amazon Bedrock & Amazon Neptune |
 
-## Key Sessions and Knowledge Gained
+## Key Knowledge Takeaways
 
-### Career Growth from IT Helpdesk to Cloud and DevOps
+### Professional Evolution: From IT Support to Cloud/DevOps Engineering
 
-One of the most practical sessions described the journey from an IT Helpdesk role to Senior Sysadmin, Cloud, and DevOps responsibilities. The main lesson was that a strong technology career can be built through consistent self-learning, hands-on labs, and real operational experience.
+A key highlight was the session detailing a personal career progression from entry-level Helpdesk support to senior System Administration and DevOps engineering. The core takeaway was that long-term career growth relies on persistent continuous learning, regular hands-on experimentation, and deep operational curiosity.
 
-The session emphasized several important habits: learning Linux and networking deeply, documenting configurations and runbooks, building monitoring before incidents happen, and avoiding direct testing on production systems. This message was especially relevant to me because my internship project also required careful validation, evidence collection, and cost-aware operation on AWS.
+The speaker highlighted several crucial engineering habits:
+- Mastering low-level Linux system concepts and networking fundamentals.
+- Maintaining detailed operational documentation and runbooks.
+- Implementing proactive monitoring frameworks prior to system deployment.
+- Strict avoidance of testing changes directly in production environments.
 
-### Effective Teamwork and Project Execution
+These principles strongly resonated with my internship workflow, reinforcing the necessity of strict validation, cost-aware resource allocation, and systematic logging during AWS development.
 
-Another session focused on teamwork efficiency. The speaker explained that individual productivity is different from team productivity, and that a strong team needs shared goals, suitable task assignment, open communication, active listening, and personal accountability.
+### Team Collaboration & Agile Project Execution
 
-The four teamwork rules that stood out were:
+Focused on team dynamics, this topic highlighted the difference between individual coding output and collective team velocity. Successful engineering teams require alignment around unified goals, clear domain delegation, active listening, transparent communication, and individual ownership.
 
-- Clear and shared goals.
-- Right person, right place.
-- Open communication and active listening.
-- Personal accountability.
+Four key team-building pillars were highlighted:
+1. Establishing clear, shared project milestones.
+2. Aligning tasks with individual technical strengths.
+3. Cultivating transparent and constructive dialogue.
+4. Upholding personal responsibility for assigned deliverables.
 
-This helped me reflect on how internship work is not only about completing technical tasks, but also about communicating progress, aligning expectations, and using tools such as Trello, ClickUp, Google Workspace, Slack, or Discord to coordinate work more effectively.
+This topic prompted me to re-evaluate my daily team interactions, emphasizing that engineering success involves effective progress tracking, active coordination, and leveraging collaborative tools like Trello, Slack, and Discord to maintain transparency.
 
-### Docker and Containerization
+### Containerization with Docker
 
-The Docker session explained why containerization is important for modern software delivery. Compared with traditional virtual machines, containers are lighter, faster to start, and easier to move across environments. Docker packages an application with its dependencies and configuration, which helps reduce the common problem of software working on one machine but failing on another.
+This session unpacked the technical reasons behind containerization as an industry standard for application deployment. In contrast to resource-heavy Virtual Machines, containers offer lightweight, fast-starting, and highly portable application environments. By encapsulating code along with its runtime, system libraries, and settings, Docker eliminates cross-environment configuration issues.
 
-The session also introduced core Docker concepts such as Dockerfile, image layers, build cache, container lifecycle commands, networks, and volumes. This strengthened my understanding of why containers are widely used in CI/CD pipelines, microservices, cloud-native applications, and legacy modernization projects.
+The presentation covered core container primitives, including Dockerfile configuration, layer caching strategies, image optimization, multi-stage builds, networking setups, and persistent storage volumes. This deepened my technical grasp of how containers power microservices architectures, legacy application migration, and modern CI/CD deployment pipelines.
 
-### AWS WAF and ML-based Network Intrusion Detection
+### AWS Security: Hybrid Protection via WAF and Machine Learning NIDS
 
-The cybersecurity session was one of the most technically interesting parts of the event. It explained that AWS WAF is useful for blocking common Layer 7 threats such as SQL Injection, XSS, and bot traffic, but rule-based protection alone may not detect unknown or zero-day behavior.
+Addressing advanced cybersecurity, this session explored how traditional rule-based tools like AWS WAF excel at mitigating common Layer 7 web attacks (e.g., SQLi, XSS, rate-limiting) but struggle against novel, zero-day threat patterns.
 
-The proposed approach combined AWS WAF with a Machine Learning based Network Intrusion Detection System. The speaker discussed a workflow using network traffic datasets, feature cleaning, class balancing, and model comparison across algorithms such as Random Forest, LightGBM, MLP, 1D-CNN, and XGBoost. The architecture included AWS services such as WAF, ALB, EC2, VPC, Kinesis Data Firehose, S3, Lambda, SNS, Security Hub, and GuardDuty.
+To solve this gap, the presenter proposed combining AWS WAF with a Machine Learning-based Network Intrusion Detection System (NIDS). The technical workflow covered feature extraction, class imbalance resolution, and evaluating classifiers including Random Forest, LightGBM, 1D-CNN, and XGBoost. The cloud architecture featured AWS services such as Application Load Balancer, Kinesis Data Firehose, S3, Lambda, SNS, GuardDuty, and Security Hub.
 
-This session connected strongly with my own project because both systems use ML to identify risky behavior. In my project, the risk source is an AI coding-agent trajectory; in this event session, the risk source was network traffic. The shared lesson is that ML-based detection should complement rule-based protection instead of replacing it completely.
+This session closely mirrored my internship project, as both leverage ML algorithms to evaluate risk metrics. While my project focuses on scoring AI coding-agent execution paths, this session analyzed raw network traffic packets. The vital lesson learned is that ML model predictions should complement hard safety rules rather than operate in complete isolation.
 
-### Multiplayer Game Architecture with AWS WebSockets and Godot 4
+### Real-Time Serverless Multiplayer Infrastructure (Godot 4 & AWS WebSockets)
 
-The game development session introduced how real-time multiplayer features can be implemented using Godot 4 and AWS WebSocket architecture. The speaker compared UDP/ENet, HTTP polling, and WebSocket communication, then explained why WebSocket is suitable for lobby systems, chat, and turn-based games.
+In game engineering, this session showcased building real-time multiplayer interactions using Godot 4 integrated with AWS serverless services. The speaker evaluated communication protocols—comparing UDP/ENet, HTTP polling, and WebSockets—highlighting why WebSockets are ideal for turn-based mechanics, player lobbies, and live chat features.
 
-The proposed serverless architecture used API Gateway WebSocket routes, AWS Lambda for stateless game logic, and DynamoDB to store player connection state and game progress. Practical issues such as stale connections, `GoneException`, DynamoDB scan cost, and stateless Lambda behavior were discussed.
+The serverless implementation relied on API Gateway WebSocket routes, stateless AWS Lambda functions for game state handling, and Amazon DynamoDB for active connection tracking. Practical operational hurdles were also discussed, such as managing dead client sockets (`GoneException`), optimizing DynamoDB query costs, and keeping Lambda handlers stateless.
 
-The main value of this session was understanding trade-offs. Serverless WebSocket can reduce operational burden and cost for certain games, but it requires careful state management and may not fit large-scale, physics-heavy real-time games. For those cases, services such as AWS GameLift would be more suitable.
+The main takeaway was architectural trade-off analysis: while serverless WebSocket setups significantly reduce server maintenance and baseline costs, high-frequency physics-heavy games still benefit more from dedicated server hosting platforms like AWS GameLift.
 
-### GraphRAG with Amazon Bedrock and Amazon Neptune
+### Contextual GraphRAG with Amazon Bedrock & Neptune
 
-The AI session introduced GraphRAG, an approach that improves standard Retrieval-Augmented Generation by combining generative AI with knowledge graphs. Traditional RAG often retrieves isolated text chunks, which can be insufficient for questions that require multi-hop reasoning across related entities.
+The AI track covered GraphRAG—an advanced evolution of Retrieval-Augmented Generation that merges LLMs with Knowledge Graphs. Standard RAG relies on retrieving unstructured, isolated document chunks, which often falls short when answering queries requiring multi-hop logical connections across entities.
 
-GraphRAG stores entities as nodes and relationships as edges, allowing the system to traverse connections and provide more context-aware answers. The session described two AWS implementation directions: a managed route using Amazon Bedrock Knowledge Bases and Amazon Neptune Analytics, and a custom route using frameworks such as LlamaIndex with Amazon Neptune.
+GraphRAG structures knowledge into nodes (entities) and edges (relationships), enabling LLMs to traverse interconnected context paths for higher reasoning precision. Two implementation paths on AWS were presented: a fully managed pipeline using Bedrock Knowledge Bases paired with Neptune Analytics, and a custom orchestration using LlamaIndex connected to Amazon Neptune.
 
-This session gave me a clearer view of how GenAI systems can be improved through better data structure and retrieval design, not only through larger language models.
+This provided a clear technical perspective on how Generative AI precision can be significantly enhanced through structured data retrieval design rather than solely relying on larger LLM context windows.
 
-## Event Experience
+## Personal Event Experience
 
-The event was memorable because it combined technical depth with real career stories. I was able to listen to speakers from industry and university backgrounds, observe practical demos, and learn about challenges that are often not visible in basic tutorials, such as stale WebSocket connections, database scan cost, Docker layer caching, and ML model evaluation for security problems.
+Participating in this event was an enriching experience that blended deep technical insights with practical industry context. Listening to real-world engineering experiences provided clarity on production challenges that standard online tutorials often overlook, such as handling orphan WebSocket sockets, minimizing database scan costs, optimizing Docker layer builds, and evaluating security ML models.
 
-The in-person setting also helped me practice professional participation: arriving at the venue, following the event agenda, listening actively, taking notes, and connecting the shared knowledge back to my own project. The event provided not only knowledge but also motivation and a stronger sense of belonging to the cloud and AI learning community.
+The in-person format also allowed me to practice technical professionalism: adhering to the event schedule, actively taking structured notes, engaging with session topics, and contextualizing the presented solutions back to my own cloud engineering tasks.
 
-## Lessons Learned
+## Key Professional Lessons
 
-- Hands-on practice is more persuasive than theory alone. Building labs, documenting work, and creating a working portfolio are important for career growth.
-- Architecture decisions are trade-offs. Containers, virtual machines, serverless WebSocket, dedicated game servers, rule-based security, and ML-based detection each fit different contexts.
-- Security should combine prevention and detection. Rule-based systems such as WAF are useful, but behavior-based ML detection can add another layer of protection.
-- Cloud-native and AI technologies are converging. Managed services such as Lambda, API Gateway, DynamoDB, Bedrock, and Neptune help developers build advanced systems faster.
-- Teamwork requires structure. Clear goals, good communication, and personal accountability are as important as technical ability.
+- **Portfolio over Theory:** Hands-on lab execution, thorough documentation, and tangible project proofs are essential for professional credibility.
+- **Architecture as Trade-Offs:** Every technical option—whether VMs vs. Containers, Serverless vs. Dedicated Servers, or Rule-Based vs. ML-Based Security—involves clear trade-offs depending on the context.
+- **Layered Defense Strategy:** Modern security strategies require combining deterministic rule filters with statistical anomaly detection for comprehensive threat coverage.
+- **Serverless & AI Convergence:** Fully managed cloud services (Lambda, API Gateway, DynamoDB, Bedrock) allow small teams to rapidly build complex AI-driven platforms.
+- **Structured Collaboration:** Technical skill alone is insufficient; successful projects depend on explicit goals, open communication, and individual accountability.
 
-## Connection to My Internship Project
+## Practical Relevance to My Internship Project
 
-This event was directly useful for my internship project on **AI Coding Agent Risk Scoring on AWS SageMaker**. The ML-based NIDS session helped me think about risk detection as a combination of model prediction and hard safety rules. The Docker and DevOps sessions reinforced the need for repeatable environments and careful deployment practices. The teamwork session helped me improve the way I document worklog progress and communicate project value.
+The knowledge gained from this event directly benefited my internship project, **AI Coding Agent Risk Scoring on AWS SageMaker**. The ML-based threat detection session reinforced my approach to combining machine learning output scores with strict system policy checks. Furthermore, the discussions on Docker packaging and serverless integration provided actionable ideas for refining my deployment procedures and pipeline automation.
 
-Most importantly, the event strengthened my view that AI-assisted systems should be evaluated with evidence. Whether the system is detecting network attacks, generating answers through GraphRAG, or scoring AI coding-agent behavior, the engineering process must include logs, metrics, validation, and clear operational boundaries.
+Ultimately, the event reinforced a fundamental engineering principle: complex automated systems require continuous observability. Whether detecting network intrusions, executing GraphRAG lookups, or assessing AI agent behavior, reliable production deployments depend on accurate logging, metrics collection, and defined guardrails.
 
-## Registration Evidence
+## Registration Verification
 
-| Registration Detail | Value |
+| Verification Attribute | Recorded Information |
 |---|---|
-| Full name | Chu Nguyễn Tuấn Anh |
-| Email | anh.chunguyentuan@hcmut.edu.vn |
-| Phone | 0962037357 |
-| University | Trường Đại học Bách khoa |
-| Student ID | 2352022 |
-| Registration date | 06/06/2026 |
-| Work shift | Fulltime |
-| Floor | 26th Floor |
-| Purpose | Attend Events |
+| Student Name | Bùi Thanh Tuyền |
+| Primary Email | tuyen.bui2005@hcmut.edu.vn |
+| Contact Phone | 0387697447 |
+| Educational Institution | Ho Chi Minh City University of Technology (HCMUT) |
+| Student Identification | 2353284 |
+| Date of Registration | June 06, 2026 |
+| Assigned Shift | Fulltime |
+| Facility Level | 26th Floor |
+| Engagement Objective | Attend Events |
 
-## Participation Evidence
+## Attendance Proof
 
-I forgot to take a personal photo during this event. The retained evidence is therefore the FCAJ Portal attendance-history record below, which shows my check-in for the 09:00 shift on 06/06/2026 at the 26th Floor. This screenshot documents portal attendance; it is not a personal event photo.
+Because I did not capture a personal photograph during the conference, official attendance is verified via the FCAJ Portal check-in record below. The log confirms my registration and check-in for the 09:00 AM shift on June 06, 2026, at the 26th Floor venue.
 
 ![FCAJ Portal attendance-history evidence for Event 1 on 06 June 2026](/images/events/event1-portal-checkin.png)
 
