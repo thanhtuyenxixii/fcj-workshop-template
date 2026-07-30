@@ -59,9 +59,6 @@ Tuần đầu tiên tập trung làm quen với lộ trình thực tập AWS Fir
 
 Đặt nền móng lý thuyết và kiến trúc để chuyển đổi bài toán đánh giá rủi ro AI Agent sang mô hình Cloud-native.
 
-## Hình ảnh minh chứng
-
-![Học tập nền tảng AWS](/images/worklog/week01-aws-foundation.png)
 
 ## Tài liệu tham khảo
 
