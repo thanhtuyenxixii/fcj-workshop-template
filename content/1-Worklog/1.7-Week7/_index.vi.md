@@ -1,6 +1,6 @@
 ---
-title: "Tuần 7: Đóng gói model và chuẩn bị managed governance"
-date: 2024-01-01
+title: "Tuần 7: Cân bằng tải ALB & Auto Scaling"
+date: 2026-07-13
 weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
@@ -8,79 +8,62 @@ pre: " <b> 1.7. </b> "
 
 ## 13/07/2026 - 19/07/2026
 
-**Hình thức làm việc:** Triển khai cá nhân kết hợp học tập và thảo luận theo nhóm.  
-**Chương trình:** Workforce Bootcamp - First Cloud AI Journey.  
-**Mentor:** Không có mentor cố định; công việc được tự quản lý, kết hợp tài liệu, tutorial và thảo luận với các bạn học.
+**Hình thức làm việc:** Tự thực hiện kết hợp thảo luận nhóm.
+**Chương trình:** Workforce Bootcamp - First Cloud AI Journey.
+**Người hướng dẫn (Mentor):** Tự quản lý tiến độ với sự hỗ trợ từ tài liệu AWS.
 
 ## Mục tiêu
 
-Chuẩn bị model packaging tương thích SageMaker và managed ML workflow có governance trước khi chạy các AWS jobs được nghiệm thu.
+Cấu hình Application Load Balancer (ALB) và chính sách Auto Scaling đảm bảo tính sẵn sàng cao cho dịch vụ đánh giá rủi ro.
 
 ## Bối cảnh
 
-Tuần 6 tạo local fallback artifact khi Region ban đầu chưa có Training quota. Tuần 7 tập trung vào packaging, held-out evaluation, HPO, Pipeline, Registry governance và historical-serving runbook có kiểm soát chi phí. Tuần này không claim rằng managed Registry package đã được deploy.
+Tuần 7 tập trung vào việc phân phối lưu lượng truy cập và tự động mở rộng tài nguyên khi số lượng yêu cầu đánh giá tăng đột biến.
 
-> **Chuẩn bị, không phải Registry deployment:** Không managed Registry package nào được approve hoặc deploy trong Tuần 7. Accepted AWS runs và historical serving evidence tách biệt được ghi ở Tuần 8.
+## Trọng tâm học tập AWS
 
-## AWS services và kiến thức đã tìm hiểu
+- **Application Load Balancer (ALB):** Listener Rules, Target Groups và Health Checks.
+- **Target Tracking Scaling:** Tự động tăng/giảm số lượng Task dựa trên mức sử dụng CPU hoặc số lượng Request.
+- **High Availability:** Kiểm thử khả năng chịu lỗi khi một AZ gặp sự cố.
 
-- **Model packaging:** Đóng gói lại XGBoost artifacts cùng inference code và decision-policy code tương thích.
-- **Held-out evaluation:** Chuẩn bị đánh giá trên test split riêng với safety-oriented metrics.
-- **SageMaker Experiments và HPO:** Chuẩn bị bounded Random tuning run với ba child jobs chạy tuần tự.
-- **SageMaker Pipeline:** Compile workflow local và verify `Preprocess → Train → Evaluate → CheckRiskyRecall`.
-- **Safety gate:** Định nghĩa `risky_recall >= 0.85` là điều kiện cho phép registration, không phải approval để deploy.
-- **Model Registry:** Giữ package approval ở `PendingManualApproval` để registration và release là hai quyết định riêng.
-- **Historical serving:** Chuẩn bị runbook Endpoint/Lambda/API ngắn hạn với confirmation và cleanup bắt buộc.
-
-## Bảng công việc theo ngày
+## Chi tiết công việc hàng ngày
 
 | Ngày | Công việc đã thực hiện |
 |---|---|
-| 13/07/2026 | Đóng gói lại managed-compatible XGBoost artifact và inference code. |
-| 14/07/2026 | Chuẩn bị held-out evaluation inputs và safety-oriented metric checks. |
-| 15/07/2026 | Chuẩn bị SageMaker Experiments và bounded Random HPO configuration. |
-| 16/07/2026 | Compile Pipeline local và review conditional registration graph. |
-| 17/07/2026 | Verify risky-recall gate chỉ cho phép registration và giữ approval thủ công. |
-| 18/07/2026 - 19/07/2026 | Chuẩn bị historical-serving confirmation gate, cleanup order và evidence checklist. |
+| 13/07/2026 | Khởi tạo Application Load Balancer trên các Public Subnets. |
+| 14/07/2026 | Cấu hình Target Group trỏ đến ECS Fargate Tasks kèm Health Check path `/health`. |
+| 15/07/2026 | Thiết lập chính sách Target Tracking Auto Scaling (ngưỡng CPU 70%). |
+| 16/07/2026 | Gửi tải giả lập để kiểm thử khả năng tự động Scale-out từ 1 lên 4 Tasks. |
+| 17/07/2026 | Tự động Scale-in giảm số Task khi hết tải. |
+| 18/07/2026 - 19/07/2026 | Thu thập thông số CloudWatch và cập nhật tài liệu. |
 
-## Công việc kỹ thuật
+## Hoạt động kỹ thuật
 
-- Đóng gói lại managed-compatible XGBoost artifact và inference code.
-- Chuẩn bị held-out evaluation, HPO, Pipeline và Registry scripts/configuration.
-- Compile Pipeline local và verify cấu trúc `Preprocess → Train → Evaluate → CheckRiskyRecall`.
-- Định nghĩa release boundary: `risky_recall >= 0.85` chỉ cho phép registration; approval và deployment vẫn là quyết định thủ công.
-- Chuẩn bị short-lived historical-serving runbook với paid-resource confirmation và cleanup order rõ ràng.
+- Dùng ALB phân phối lưu lượng HTTP vào Target Group của ECS.
+- Thử nghiệm gửi lượng lớn Request để xác nhận hệ thống tự mở rộng tài nguyên.
 
-## Deliverables
+## Kết quả đạt được (Deliverables)
 
-- **Managed-compatible artifact và inference package đã chuẩn bị.**
-- **Held-out evaluation và bounded HPO configuration đã chuẩn bị.**
-- **Pipeline đã compile local với conditional safety gate.**
-- **Registry approval boundary được ghi là `PendingManualApproval`.**
-- **Historical-serving confirmation và cleanup runbook đã chuẩn bị.**
+- **Application Load Balancer hoạt động kèm Health Checks.**
+- **Chính sách Auto Scaling mở rộng tự động thành công.**
+- **Báo cáo kiểm thử tải trọng và độ sẵn sàng cao.**
 
-## Khó khăn và cách xử lý
+## Thách thức & Giải pháp
 
-**Khó khăn:** Packaging, registration, approval và deployment là các lifecycle stage riêng, nhưng báo cáo đơn giản hóa có thể vô tình trình bày chúng như một hành động đã hoàn tất.
+**Thách thức:** Target Group báo trạng thái Unhealthy khi mới tạo.
 
-**Cách xử lý:** Tuần này chỉ ghi preparation. Accepted managed jobs, registration outcomes và historical serving được ghi ở Tuần 8, đồng thời giữ managed artifact và serving artifact thành hai evidence track riêng.
+**Giải pháp:** Sửa lại URL Health Check (`/health`) và mở đúng Port Container trong Security Group.
 
-## Liên hệ với project chính
+## Đóng góp cho Dự án
 
-Tuần này thiết lập governance boundary cho project hoàn thiện: metric thành công có thể cho phép registration, còn human review kiểm soát approval và deployment.
+Đảm bảo dịch vụ AI Agent không bị gián đoạn hay quá tải khi nhận nhiều yêu cầu đánh giá cùng lúc.
 
-## Evidence lịch sử
 
-![Local model artifact trước đó được giữ trong S3](/images/worklog/week07-model-artifact-s3.png)
+## Tài liệu tham khảo
 
-Ảnh này ghi lại việc lưu earlier local artifact, artifact sau đó được dùng cho historical serving demo riêng. Đây không phải evidence cho thấy managed Registry package nào đã được deploy.
-
-## Bằng chứng và tài liệu tham khảo đã tìm hiểu
-
-- [SageMaker Pipelines](https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines.html)
-- [SageMaker Model Registry](https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry.html)
-- [Automatic Model Tuning](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html)
+- [Elastic Load Balancing Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
+- [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html)
 
 ---
 
-[Trước](/vi/1-worklog/1.6-week6/) | [Quay lại Worklog](/vi/1-worklog/) | [Tiếp](/vi/1-worklog/1.8-week8/)
+[Quay lại Worklog](/1-worklog/) | [Tuần tiếp theo](/1-worklog/1.8-week8/)
