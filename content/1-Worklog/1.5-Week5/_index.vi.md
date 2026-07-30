@@ -1,6 +1,6 @@
 ---
-title: "Tuần 5: SageMaker Processing và feature engineering"
-date: 2024-01-01
+title: "Tuần 5: Đóng gói Container với Docker & Amazon ECR"
+date: 2026-06-29
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
@@ -8,83 +8,61 @@ pre: " <b> 1.5. </b> "
 
 ## 29/06/2026 - 05/07/2026
 
-**Hình thức làm việc:** Triển khai cá nhân kết hợp học tập và thảo luận theo nhóm.
+**Hình thức làm việc:** Tự thực hiện kết hợp thảo luận nhóm.
 **Chương trình:** Workforce Bootcamp - First Cloud AI Journey.
-**Mentor:** Không có mentor cố định; công việc được tự quản lý, kết hợp tài liệu, tutorial và thảo luận với các bạn học.
+**Người hướng dẫn (Mentor):** Tự quản lý tiến độ với sự hỗ trợ từ tài liệu AWS.
 
 ## Mục tiêu
 
-Triển khai bước managed processing để chuyển raw trajectory JSONL data thành tabular ML features.
+Đóng gói mô-đun đánh giá rủi ro AI Agent bằng Docker và lưu trữ Container Image trên Amazon ECR.
 
 ## Bối cảnh
 
-Đây là bước AWS ML workflow lớn đầu tiên. Mục tiêu là chứng minh raw logs có thể được xử lý trên SageMaker infrastructure và ghi lại về S3 dưới dạng train/validation/test CSV sạch.
+Tuần 5 đóng gói toàn bộ mã nguồn Python, thư viện PyTorch và script xử lý dữ liệu thành Docker Container để đảm bảo tính nhất quán khi triển khai lên Cloud.
 
-## AWS services và kiến thức đã tìm hiểu
+## Trọng tâm học tập AWS
 
-Tuần này tập trung vào Amazon SageMaker Processing, AWS managed ML workflow service đầu tiên được dùng trong project. Tôi tìm hiểu cả mục đích của service lẫn các thao tác cụ thể để chạy một processing job.
+- **Tối ưu Dockerfile:** Kỹ thuật Multi-stage build và chọn Base Image nhẹ (`python-slim`).
+- **Docker Compose:** Điều phối ứng dụng đa container để kiểm thử cục bộ.
+- **Amazon ECR:** Tạo Private Registry, đăng nhập qua AWS CLI và quản lý Image Tags.
 
-- **Purpose of SageMaker Processing:** Học rằng Processing được dùng để chạy data preparation, validation, transformation và feature engineering jobs trên managed infrastructure.
-- **Processing script:** Tìm hiểu cách Python script nhận input files, transform records và ghi output files bên trong processing container.
-- **ProcessingInput:** Rà soát cách input data từ S3 được mount vào processing job để script đọc raw JSONL files.
-- **ProcessingOutput:** Rà soát cách generated files được upload từ container trở lại S3 output prefix khi job kết thúc.
-- **Processing image và instance type:** Tìm hiểu rằng processing job cần container image và compute instance type, ví dụ CPU-based instance cho tabular preprocessing.
-- **IAM execution role:** Kiểm tra SageMaker cần quyền đọc raw S3 prefix và ghi processed S3 prefix.
-- **CloudWatch logs:** Rà soát logs như cách chính để debug processing script có chạy thành công hay không.
-- **Project application:** Áp dụng các khái niệm này để chuyển trajectory JSONL logs thành `train.csv`, `validation.csv` và `test.csv`.
-
-Phần này cho thấy processing step không chỉ là code transformation, mà còn là một AWS managed job có S3 input/output, IAM, compute và logs.
-
-## Bảng công việc theo ngày
+## Chi tiết công việc hàng ngày
 
 | Ngày | Công việc đã thực hiện |
 |---|---|
-| 29/06/2026 | Triển khai logic extract feature từ trajectory JSONL records sang tabular fields. |
-| 30/06/2026 | Test local processing output và verify việc tạo train, validation, test CSV. |
-| 01/07/2026 | Chuẩn bị SageMaker Processing configuration với S3 input/output paths. |
-| 02/07/2026 | Chạy hoặc verify SageMaker Processing workflow và xác nhận processed output locations. |
-| 03/07/2026 | Kiểm tra processed CSV trên S3 và evidence CLI/processing cho completed job. |
-| 04/07/2026 - 05/07/2026 | Chụp S3 processed output screenshots và ghi lại feature engineering trong workshop. |
+| 29/06/2026 | Chuẩn bị danh sách thư viện Python (`torch`, `boto3`, `scikit-learn`). |
+| 30/06/2026 | Viết Dockerfile tối ưu cho Risk Scoring Engine. |
+| 01/07/2026 | Build và kiểm thử chạy Docker Container cục bộ. |
+| 02/07/2026 | Khởi tạo Private ECR Repository `ai-agent-risk-evaluator`. |
+| 03/07/2026 | Đăng nhập ECR qua AWS CLI và đẩy (push) Image lên Cloud. |
+| 04/07/2026 - 05/07/2026 | Bật tính năng quét lỗ hổng bảo mật (Image Scanning) trên ECR. |
 
+## Hoạt động kỹ thuật
 
-## Công việc kỹ thuật
+- Viết Dockerfile tối ưu dung lượng cho mô-đun Python PyTorch.
+- Đẩy Docker Images chứa các Tag (`v1.0.0`, `latest`) lên ECR.
 
-- Triển khai feature engineering cho file counts, modified file counts, command counts, test/lint pass indicators, sensitive file flags, risky command flags, network command flags và diff-size features.
-- Chuyển labels thành target values sẵn sàng cho model, đồng thời giữ ý nghĩa ban đầu để giải thích trong báo cáo.
-- Cấu hình SageMaker Processing input/output paths để processing job đọc raw JSONL từ S3 và ghi CSV outputs về S3.
-- Kiểm tra job status và logs qua SageMaker/CloudWatch để xác nhận processing job hoàn tất và giải phóng compute resources.
+## Kết quả đạt được (Deliverables)
 
-## Deliverables
+- **Dockerfile chuẩn hóa cho bộ mô hình AI.**
+- **Private Amazon ECR Repository đi vào hoạt động.**
+- **Docker Image được tải lên ECR thành công.**
 
-- **Hoàn thành feature engineering script.**
-- **Tạo train/validation/test CSV outputs.**
-- **Verify SageMaker Processing job.**
-- **Ghi lại processing step để tái hiện trong workshop.**
+## Thách thức & Giải pháp
 
-## Khó khăn và cách xử lý
+**Thách thức:** Dung lượng Docker Image quá lớn do chứa thư viện PyTorch mặc định.
 
-**Khó khăn:** Vấn đề chính là giữ output processing đủ đơn giản cho XGBoost nhưng vẫn giữ các safety signals quan trọng.
+**Giải pháp:** Sử dụng bản PyTorch CPU-only giúp giảm hơn 60% dung lượng Image.
 
-**Cách xử lý:** Features được giữ ở dạng tabular và dễ giải thích để workshop có thể trình bày vì sao một risky run nhận risk score cao hơn.
+## Đóng góp cho Dự án
 
-## Liên hệ với project chính
+Tạo ra các đóng gói Container chuẩn bị cho việc triển khai linh hoạt trên hạ tầng Serverless ECS Fargate.
 
-Tuần này đóng góp vào MVP cuối bằng cách củng cố luồng từ **bằng chứng hành vi của AI coding agent** đến **workflow đánh giá rủi ro trên AWS**. Nội dung giúp workshop cuối không chỉ là giải thích khái niệm, mà còn bám theo đúng trình tự triển khai thực tế của project.
+## Tài liệu tham khảo
 
-## Ảnh bằng chứng
-
-![Processed CSV outputs trên S3](/images/worklog/week05-processed-csv-s3.png)
-
-![Bằng chứng SageMaker Processing job từ CLI](/images/worklog/week05-sagemaker-processing-job-cli.png)
-
-Các ảnh chụp cho thấy bước processing đã tạo các file train, validation và test CSV trong S3 prefix của project.
-
-## Bằng chứng và tài liệu tham khảo đã tìm hiểu
-
-- [SageMaker Processing](https://docs.aws.amazon.com/sagemaker/latest/dg/processing-job.html)
-- [SageMaker Python SDK Processing API](https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_processing.html)
-- [CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
+- [Docker Documentation](https://docs.docker.com/)
+- [Amazon ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)
 
 ---
 
-[Trước](/vi/1-worklog/1.4-week4/) | [Quay lại Worklog](/vi/1-worklog/) | [Tiếp](/vi/1-worklog/1.6-week6/)
+[Quay lại Worklog](/1-worklog/) | [Tuần tiếp theo](/1-worklog/1.6-week6/)
