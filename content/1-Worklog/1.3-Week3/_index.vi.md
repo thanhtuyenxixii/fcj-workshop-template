@@ -1,6 +1,6 @@
 ---
-title: "Tuần 3: Thiết kế dataset và mô phỏng trajectory logs"
-date: 2024-01-01
+title: "Tuần 3: Lưu trữ S3 & VPC Endpoints"
+date: 2026-06-15
 weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
@@ -8,81 +8,61 @@ pre: " <b> 1.3. </b> "
 
 ## 15/06/2026 - 21/06/2026
 
-**Hình thức làm việc:** Triển khai cá nhân kết hợp học tập và thảo luận theo nhóm.
+**Hình thức làm việc:** Tự thực hiện kết hợp thảo luận nhóm.
 **Chương trình:** Workforce Bootcamp - First Cloud AI Journey.
-**Mentor:** Không có mentor cố định; công việc được tự quản lý, kết hợp tài liệu, tutorial và thảo luận với các bạn học.
+**Người hướng dẫn (Mentor):** Tự quản lý tiến độ với sự hỗ trợ từ tài liệu AWS.
 
 ## Mục tiêu
 
-Thiết kế định dạng raw trajectory log và sinh sample đại diện để hỗ trợ feature engineering và supervised model training.
+Xây dựng cấu trúc lưu trữ Amazon S3 cho dữ liệu AI Agent và thiết lập kết nối nội bộ qua S3 VPC Gateway Endpoints.
 
 ## Bối cảnh
 
-Model không thể chấm điểm hành vi agent nếu không có bằng chứng có cấu trúc. Tuần này chuyển các khái niệm rủi ro trừu tượng thành field có thể lưu trữ, xử lý và chuyển thành ML features.
+Tuần 3 tập trung chuẩn bị kho lưu trữ dữ liệu log hành vi của AI Agent và đảm bảo các máy chủ nội bộ truy cập S3 qua đường truyền riêng của AWS.
 
-## AWS services và kiến thức đã tìm hiểu
+## Trọng tâm học tập AWS
 
-Tuần này tập trung vào data foundation cần có trước khi dùng AWS ML services. Tôi tìm hiểu cách logs và labels nên được chuẩn bị để sau đó có thể xử lý bằng SageMaker và lưu trong S3.
+- **Cấu trúc Amazon S3:** Phân chia Prefix (`raw-agent-logs/`, `processed-features/`, `model-artifacts/`).
+- **Bảo mật S3:** Bật mã hóa SSE-S3, Cấu hình Bucket Policy và Block Public Access.
+- **S3 VPC Gateway Endpoints:** Định tuyến dữ liệu S3 trực tiếp qua mạng nội bộ AWS.
 
-- **JSONL log format:** Tìm hiểu vì sao JSONL phù hợp cho event-style logs: mỗi dòng là một record, dễ append, dễ inspect và phù hợp batch processing.
-- **Raw data design for S3:** Rà soát nguyên tắc giữ raw files gần với dạng gốc để các bước processing sau có thể tái lập.
-- **Schema consistency:** Tìm hiểu vì sao mỗi trajectory record cần có fields nhất quán như files read, files modified, commands run, test status, lint status và final summary.
-- **Feature planning:** Xác định raw fields có thể trở thành tabular ML features: số file đọc, số file sửa, command count, diff size, tool count và latency.
-- **Safety signal planning:** Tìm hiểu cách rule-based indicators trở thành model features, gồm sensitive-file access, destructive commands, network commands và unsupported success claims.
-- **AWS connection:** Chuẩn bị dataset structure để về sau upload lên S3 và dùng làm input cho SageMaker Processing.
-
-Tuần này chủ yếu nhằm chuẩn bị data đúng cách trước khi dùng managed services của AWS, vì raw schema kém sẽ làm processing và training sau này khó hơn.
-
-## Bảng công việc theo ngày
+## Chi tiết công việc hàng ngày
 
 | Ngày | Công việc đã thực hiện |
 |---|---|
-| 15/06/2026 | Chọn JSONL làm raw trajectory log format và xác định mỗi dòng đại diện cho một agent run. |
-| 16/06/2026 | Thiết kế các field files_read, files_modified, commands_run, test/lint status, diff size và final_summary. |
-| 17/06/2026 | Bổ sung safety signals như touched_sensitive_files, used_network_command và destructive_command_detected. |
-| 18/06/2026 | Sinh local sample trajectories cho các scenario safe, failed, risky và require-review. |
-| 19/06/2026 | Kiểm tra combined trajectory data và labels để xác nhận dataset hỗ trợ supervised learning. |
-| 20/06/2026 - 21/06/2026 | Chụp dataset screenshots và link full JSONL evidence file để dễ đọc hơn. |
+| 15/06/2026 | Triển khai EC2 kiểm thử trong Private Subnet. |
+| 16/06/2026 | Khởi tạo S3 Bucket, chia Prefix và bật mã hóa SSE-S3. |
+| 17/06/2026 | Cấu hình S3 Bucket Policy chỉ cho phép IAM Roles của dự án truy cập. |
+| 18/06/2026 | Triển khai S3 VPC Gateway Endpoint và gắn vào Private Route Table. |
+| 19/06/2026 | Kiểm thử đọc/ghi dữ liệu S3 từ EC2 riêng tư không có Internet. |
+| 20/06/2026 - 21/06/2026 | Thiết lập Lifecycle Rules và lưu trữ minh chứng. |
 
+## Hoạt động kỹ thuật
 
-## Công việc kỹ thuật
+- Khởi tạo Bucket `ai-agent-risk-data-store-ap-southeast-1` có bật Versioning.
+- Gắn S3 Gateway Endpoint vào Private Route Table để truyền dữ liệu an toàn.
 
-- Chọn JSONL làm raw data format vì đơn giản, dễ append và phù hợp với cách lưu mỗi dòng là một agent run.
-- Tạo các field như task description, files_read, files_modified, commands_run, tests_passed, lint_passed, diff_lines_added, diff_lines_deleted, touched_sensitive_files, used_network_command, destructive_command_detected và final_summary.
-- Định nghĩa các label đại diện như safe, failed, risky và hallucinated_success để phản ánh cả vấn đề chất lượng lẫn an toàn.
-- Sinh sample runs local gồm normal fixes, thiếu test evidence, truy cập file nhạy cảm, risky command attempts và diff lớn ngoài phạm vi.
+## Kết quả đạt được (Deliverables)
 
-## Deliverables
+- **S3 Bucket được mã hóa và phân chia Prefix chuẩn.**
+- **S3 VPC Gateway Endpoint hoạt động ổn định.**
+- **Kiểm thử đọc/ghi S3 nội bộ thành công.**
 
-- **Định nghĩa raw JSONL schema.**
-- **Sinh synthetic trajectory samples.**
-- **Ghi lại labeling rules.**
-- **Dataset sẵn sàng upload lên S3.**
+## Thách thức & Giải pháp
 
-## Khó khăn và cách xử lý
+**Thách thức:** Kiểm thử đọc/ghi S3 từ máy chủ Private không có Internet.
 
-**Khó khăn:** Generated dataset cần đủ thực tế cho demo nhưng vẫn đủ đơn giản để giải thích trong workshop.
+**Giải pháp:** Sử dụng VPC Gateway Endpoint giúp kết nối thẳng tới S3 mà không cần qua Internet.
 
-**Cách xử lý:** Schema tập trung vào các field có tín hiệu mạnh và dễ hiểu: phạm vi file, an toàn command, bằng chứng test/lint, truy cập nhạy cảm và diff size.
+## Đóng góp cho Dự án
 
-## Liên hệ với project chính
+Tạo kho lưu trữ an toàn tuyệt đối cho toàn bộ dữ liệu mẫu và mô hình AI Agent.
 
-Tuần này đóng góp vào MVP cuối bằng cách củng cố luồng từ **bằng chứng hành vi của AI coding agent** đến **workflow đánh giá rủi ro trên AWS**. Nội dung giúp workshop cuối không chỉ là giải thích khái niệm, mà còn bám theo đúng trình tự triển khai thực tế của project.
+## Tài liệu tham khảo
 
-## Ảnh và file bằng chứng
-
-![Ảnh chụp trajectory JSONL sample](/images/worklog/week03-trajectory-jsonl.png)
-
-![Folder sinh dataset](/images/worklog/week03-dataset-folder.png)
-
-Ảnh JSONL sample có thể khó đọc khi hiển thị toàn trang, nên file raw trajectory đầy đủ được link trực tiếp tại đây: [week03-sample-trajectories.jsonl](/images/worklog/week03-sample-trajectories.jsonl).
-
-## Bằng chứng và tài liệu tham khảo đã tìm hiểu
-
-- [JSON Lines format](https://jsonlines.org/)
-- [Amazon S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
-- [IAM security best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+- [Amazon S3 Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
+- [VPC Endpoints for S3](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html)
 
 ---
 
-[Trước](/vi/1-worklog/1.2-week2/) | [Quay lại Worklog](/vi/1-worklog/) | [Tiếp](/vi/1-worklog/1.4-week4/)
+[Quay lại Worklog](/1-worklog/) | [Tuần tiếp theo](/1-worklog/1.4-week4/)
