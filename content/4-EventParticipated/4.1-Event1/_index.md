@@ -133,7 +133,7 @@ Ultimately, the event reinforced a fundamental engineering principle: complex au
 
 Because I did not capture a personal photograph during the conference, official attendance is verified via the FCAJ Portal check-in record below. The log confirms my registration and check-in for the 09:00 AM shift on June 06, 2026, at the 26th Floor venue.
 
-![FCAJ Portal attendance-history evidence for Event 1 on 06 June 2026](/images/events/event1-portal-checkin.png)
+![FCAJ Portal attendance-history evidence for Event 1 on 06 June 2026](static/images/events/event1.jfif)
 
 ---
 
