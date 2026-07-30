@@ -1,6 +1,6 @@
 ---
-title: "Week 11: Planned Final Report and Review"
-date: 2024-01-01
+title: "Week 11: CloudWatch Monitoring, Security & Cost Optimization"
+date: 2026-08-10
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
@@ -8,43 +8,63 @@ pre: " <b> 1.11. </b> "
 
 ## 10/08/2026 - 16/08/2026
 
-**Status:** Planned  
-**Work mode:** Individual implementation combined with group-based learning and discussion.  
+**Work mode:** Individual implementation combined with group-based learning and discussion.
 **Program:** Workforce Bootcamp - First Cloud AI Journey.
+**Mentor:** Self-managed supported by AWS Documentation.
 
 ## Objective
 
-Perform the final bilingual report, navigation, rendering, evidence, and submission review after the scheduled week begins.
+Set up operational visibility with Amazon CloudWatch Alarms/Dashboards, conduct a security audit, and apply cost optimization measures across all deployed services.
 
-## Planned Activities
+## Context
 
-- Run final English/Vietnamese parity and navigation review.
-- Build Hugo cleanly and inspect representative pages at desktop and narrow widths.
-- Reconcile Worklog, Proposal, Workshop, Self-evaluation, and Feedback against the accepted project reports.
-- Apply reviewer corrections without changing accepted AWS evidence.
-- Prepare the final submission and absence/cost checklist.
+With the system fully integrated, Week 11 focused on production readiness: monitoring operational health, catching errors automatically, and controlling cloud expenditure.
 
-## Planned Daily Breakdown
+## AWS Learning Focus
 
-| Date | Planned work |
+- **Amazon CloudWatch Dashboards & Alarms:** Metrics tracking (API latency, Lambda errors, SageMaker invocation counts, CPU utilization).
+- **Cost Optimization Strategies:** AWS Cost Explorer analysis, S3 Lifecycle policies, and Endpoint instance right-sizing.
+- **Cloud Security Audit:** Verifying IAM policies and ensuring no public S3 access or exposed API keys exist.
+
+## Daily Breakdown
+
+| Date | Work performed |
 |---|---|
-| 10/08/2026 | Review report structure and student information. |
-| 11/08/2026 | Review Worklog chronology and evidence boundaries. |
-| 12/08/2026 | Reconcile Proposal and Workshop facts with authoritative reports. |
-| 13/08/2026 | Verify bilingual navigation and content parity. |
-| 14/08/2026 | Build Hugo and inspect representative desktop/narrow pages. |
-| 15/08/2026 | Apply reviewer corrections and re-run local verification. |
-| 16/08/2026 | Prepare the final submission and absence/cost checklist. |
+| 10/08/2026 | Configured CloudWatch Log Groups for API Gateway, Lambda, and SageMaker. |
+| 11/08/2026 | Created CloudWatch Alarms for Lambda error rate (>5%) and API latency (>2s). |
+| 12/08/2026 | Built a unified CloudWatch Operational Dashboard for real-time monitoring. |
+| 13/08/2026 | Analyzed AWS Cost Explorer metrics and identified cost optimization opportunities. |
+| 14/08/2026 | Configured auto-deletion scripts for unused SageMaker Endpoints after testing hours. |
+| 15/08/2026 - 16/08/2026 | Completed IAM security audit verifying all credentials and policy boundaries. |
 
-## Planned Deliverables
+## Technical Activities
 
-- **Final bilingual parity review.**
-- **Fresh Hugo build and browser evidence.**
-- **Cross-section factual reconciliation.**
-- **Reviewer corrections and final checklist.**
+- Constructed a custom CloudWatch Dashboard displaying system throughput, error rates, and latency.
+- Set up SNS Email Notifications triggered by CloudWatch Alarms.
+- Right-sized SageMaker instances to lower student account expenses.
 
-No Week 11 result, final verification, or submission is claimed as of 25/07/2026. Accepted AWS evidence will not be changed or recreated during this documentation review.
+## Deliverables
+
+- **Amazon CloudWatch Dashboard operational.**
+- **CloudWatch Alarms & SNS Email Alerts active.**
+- **AWS Cost Explorer optimization report completed.**
+
+## Challenge and Solution
+
+**Challenge:** High recurring daily costs driven by idle SageMaker Real-Time Endpoints.
+
+**Solution:** Implemented a Lambda scheduled event (via EventBridge) to delete the endpoint during off-hours and re-create it before testing.
+
+## Project Relevance
+
+Ensures the project adheres to AWS Well-Architected Framework pillars for Operational Excellence, Security, and Cost Optimization.
+
+
+## Evidence and References Studied
+
+- [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html)
+- [AWS Cost Optimization Pillar](https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/welcome.html)
 
 ---
 
-[Previous](/1-worklog/1.10-week10/) | [Back to Worklog](/1-worklog/) | [Next](/1-worklog/1.12-week12/)
+[Back to Worklog](/1-worklog/) | [Next](/1-worklog/1.12-week12/)
