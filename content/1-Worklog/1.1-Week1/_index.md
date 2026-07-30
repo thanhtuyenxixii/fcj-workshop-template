@@ -60,9 +60,6 @@ The first week was dedicated to transitioning into the AWS First Cloud AI Journe
 
 Establishes the initial cloud design for processing AI coding agent logs and serving risk evaluations through an AWS ML pipeline.
 
-## Evidence Screenshots
-
-![AWS Foundation Study](/images/worklog/week01-aws-foundation.png)
 
 ## Evidence and References Studied
 
