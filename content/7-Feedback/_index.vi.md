@@ -1,55 +1,66 @@
 ---
-title: "Chia sẻ và phản hồi"
+title: "Chia Sẻ & Góp Ý"
 date: 2024-01-01
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-## Chia sẻ và phản hồi
+## Chia Sẻ & Góp Ý Chương Trình
 
-Phần này trình bày cảm nhận và phản hồi cá nhân của tôi sau khi tham gia chương trình **Workforce Bootcamp - First Cloud AI Journey** tại **Amazon Web Services Viet Nam Company Limited**. Nội dung được viết dựa trên quá trình học AWS fundamentals, tham gia các sự kiện cộng đồng và xây dựng project **Xây dựng và triển khai hệ thống đánh giá chất lượng và rủi ro cho AI Coding Agent trên AWS SageMaker**.
+Chuyên mục này tổng hợp những góc nhìn, trải nghiệm cá nhân và đóng góp ý kiến của mình sau khi hoàn thành chương trình **Workforce Bootcamp - First Cloud AI Journey** tại **Công ty TNHH Amazon Web Services Việt Nam**. Toàn bộ các nhận định dưới đây được đúc kết từ quá trình mình tự học các dịch vụ đám mây AWS, tích cực giao lưu tại các sự kiện công nghệ và trực tiếp xây dựng dự án **Hệ thống Tự động hóa Đánh giá Rủi ro cho AI Coding Agent trên AWS SageMaker**.
 
-## Đánh giá tổng quan
+---
 
-**1. Môi trường học tập**  
-Chương trình tạo ra một môi trường học tập mở và có tính tự định hướng cao. Tôi có không gian để tự tìm hiểu AWS services, thử command, đọc documentation và xây dựng project từ ý tưởng đến MVP. Cách học này hữu ích vì giúp tôi chủ động hơn thay vì chỉ làm theo hướng dẫn cố định.
+## Đánh Giá Tổng Quan Chương Trình
 
-**2. Sự hỗ trợ từ chương trình và cộng đồng**  
-Dù không có mentor cố định cho project cá nhân, tôi vẫn học được nhiều thông qua thảo luận nhóm, tài liệu AWS, workshop và các sự kiện cộng đồng của FCAJ. Các sự kiện mang lại góc nhìn kỹ thuật và định hướng nghề nghiệp hữu ích, đặc biệt về cloud engineering, DevOps, security, data analytics và các use case generative AI.
+### 1. Môi trường trải nghiệm & Định hướng học tập
+Chương trình mang lại một không gian học tập linh hoạt và đề cao tính tự chủ. Thay bị gò bó trong các bài thực hành có sẵn, sinh viên được tự do nghiên cứu các dịch vụ AWS, thử nghiệm các ý tưởng kỹ thuật và tự định hình một sản phẩm thực tế từ bước sơ khai đến bản hoàn thiện. Điều này giúp mình rèn luyện tư duy tự chịu trách nhiệm và chủ động giải quyết vấn đề.
 
-**3. Mức độ liên quan với chuyên ngành**  
-Kỳ thực tập phù hợp với nền tảng Computer Science của tôi vì kết hợp lập trình, xử lý dữ liệu, machine learning, API design và triển khai hệ thống. Kiến thức ở trường giúp tôi hiểu phần model và data workflow, còn chương trình giúp tôi áp dụng kiến thức đó vào môi trường cloud với các dịch vụ AWS.
+### 2. Sự đồng hành từ Ban tổ chức & Cộng đồng
+Mặc dù làm việc theo mô hình tự nghiên cứu, mình vẫn nhận được sự hỗ trợ rất lớn từ tài liệu kỹ thuật chuẩn của AWS, các buổi Workshop thực hành và các sự kiện kết nối cộng đồng FCAJ. Các buổi hội thảo giúp mình cập nhật góc nhìn thực tế về quy trình vận hành Cloud, MLOps, Security, Data Analytics và Generative AI từ các chuyên gia hàng đầu.
 
-**4. Cơ hội học tập và phát triển kỹ năng**  
-Tôi cải thiện cả kỹ năng kỹ thuật và kỹ năng chuyên nghiệp trong chương trình. Về kỹ thuật, tôi thực hành Amazon S3, SageMaker Processing, managed XGBoost Training và Evaluation, Experiments/HPO, Pipeline, Model Registry, historical Endpoint serving, Lambda, API Gateway, Data Capture, Model Monitor, IAM và CloudWatch. Về chuyên nghiệp, tôi luyện tập governance design, cost-aware cleanup, evidence collection, honest evaluation và viết workshop song ngữ.
+### 3. Mức độ phù hợp với Chuyên ngành học
+Kỳ thực tập cực kỳ gắn kết với ngành Khoa học Máy tính mà mình đang theo học tại trường Đại học. Chương trình tạo điều kiện để mình xâu chuỗi các kiến thức về Lập trình, Xử lý dữ liệu, Machine Learning, Thiết kế API và Kiến trúc hệ thống; từ đó hiện thực hóa các lý thuyết học đường trên hạ tầng điện toán đám mây enterprise của AWS.
 
-**5. Văn hóa chương trình và tinh thần cộng đồng**  
-Chương trình khuyến khích học thông qua chia sẻ và tham gia cộng đồng. Các sự kiện kỹ thuật giúp kỳ thực tập không chỉ xoay quanh project cá nhân, vì tôi có cơ hội lắng nghe nhiều diễn giả và hiểu cách kỹ năng AWS được áp dụng trong công ty, định hướng nghề nghiệp và hệ thống thực tế.
+### 4. Cơ hội phát triển năng lực & Kỹ năng
+- **Kỹ năng chuyên môn:** Làm chủ quy trình vận hành các dịch vụ AWS như S3, SageMaker (Processing, Training, HPO, Pipelines, Registry, Endpoint, Model Monitor), AWS Lambda, API Gateway, IAM Roles, Data Capture và CloudWatch.
+- **Kỹ năng mềm:** Rèn luyện tư duy quản trị MLOps, ý thức kiểm soát chi phí tài nguyên, kỹ năng đóng gói tài liệu kỹ thuật song ngữ và phương pháp kiểm thử khoa học, minh bạch.
 
-**6. Chính sách thực tập và phạm vi project**  
-Hình thức tự học phù hợp với việc khám phá một chủ đề kỹ thuật cá nhân. Training quota không khả dụng tại `ap-southeast-1` ban đầu yêu cầu một historical-serving path có giới hạn; quota được duyệt tại `us-east-1` sau đó cho phép hoàn tất managed ML và governance workflow. Điều này giúp tôi học cách điều chỉnh Region cùng evidence strategy mà không nhầm temporary workaround với kiến trúc cuối.
+### 5. Văn hóa kết nối & Tinh thần cộng đồng
+Văn hóa chia sẻ tri thức là một điểm sáng lớn. Thông qua các sự kiện lớn do chương trình tổ chức, kỳ thực tập không chỉ dừng lại ở phạm vi một dự án cá nhân mà còn mở ra cơ hội giao lưu, lắng nghe chia sẻ nghề nghiệp từ các anh chị đi trước, giúp mình định hình rõ ràng hơn về con đường phát triển sự nghiệp MLOps/Cloud Engineer.
 
-## Điều tôi hài lòng nhất
+### 6. Khả năng ứng biến & Quy mô dự án
+Việc tự quản lý dự án đòi hỏi khả năng thích ứng cao trước các rào cản kỹ thuật. Khi gặp rào cản về quota tài nguyên SageMaker Training tại vùng `ap-southeast-1`, mình đã linh hoạt triển khai phương án phụ trợ trước khi chính thức được duyệt tài nguyên tại vùng `us-east-1`. Trải nghiệm này dạy mình bài học về tư duy ứng biến linh hoạt trong kỹ thuật mà vẫn đảm bảo tính toàn vẹn của kiến trúc tổng thể.
 
-Điều tôi hài lòng nhất trong kỳ thực tập là hoàn thành governed end-to-end workflow thay vì chỉ dừng ở proposal. Bắt đầu từ AI coding-agent trajectories, tôi hoàn tất managed Processing, Training, held-out Evaluation, Experiments/HPO, conditional Registry registration, historical serving, Data Capture, Model Monitor, CloudWatch acceptance và xác minh cleanup paid resources.
+---
 
-Một giá trị quan trọng khác là kiểm tra perfect synthetic result thay vì bảo vệ nó. Macro F1 của frozen model giảm từ `1.00` nội bộ xuống `0.1212` trên External/OOD pilot 40 mẫu. Kết quả này làm report mạnh hơn vì cho thấy manual approval, human review, hard safety rules và representative human-labeled data vẫn cần thiết.
+## Trải Nghiệm Hài Lòng Nhất
 
-## Gợi ý cải thiện
+Điều khiến mình tự hào nhất là đã biến một ý tưởng trên giấy thành một **Hệ thống MLOps hoàn chỉnh (End-to-End Workflow)** chạy thực tế trên AWS. Tự tay thiết lập trọn vẹn luồng dữ liệu từ khâu xử lý log hành vi, huấn luyện mô hình XGBoost, tối ưu HPO, tự động hóa bằng SageMaker Pipelines, cấu hình cổng kiểm duyệt Quality Gates, triển khai API thời gian thực và thiết lập hệ thống cảnh báo CloudWatch là một cột mốc rất ý nghĩa.
 
-- Cung cấp checklist sớm về AWS student-account quota, đặc biệt cho SageMaker Training và các tài nguyên liên quan đến endpoint.
-- Cung cấp checklist kiểm soát chi phí trước khi learner deploy các tài nguyên có thể phát sinh chi phí liên tục, ví dụ SageMaker Endpoint.
-- Chia sẻ thêm các architecture mẫu cho project ML/MLOps phù hợp với người mới, sử dụng S3, SageMaker, Lambda, API Gateway, IAM và CloudWatch.
-- Bổ sung các milestone review tùy chọn để người tham gia nhận feedback trước giai đoạn hoàn thiện báo cáo cuối.
-- Hướng dẫn rõ hơn về các loại evidence nên chụp lại trước khi cleanup AWS resources.
+Bên cạnh đó, mình rất coi trọng tính trung thực trong nghiên cứu. Việc chủ động đưa mô hình ra kiểm thử trên tập dữ liệu thực tế bên ngoài (OOD) và minh bạch báo cáo kết quả suy giảm chỉ số đã giúp mình hiểu sâu sắc giá trị của khâu phê duyệt thủ công (Manual Approval) và các quy tắc bảo mật cứng (Hard Safety Rules) trong môi trường thực tế.
 
-## Khả năng giới thiệu chương trình
+---
 
-Tôi sẽ giới thiệu chương trình First Cloud AI Journey cho bạn bè muốn học cloud computing thông qua thực hành. Chương trình đặc biệt hữu ích cho sinh viên đã có nền tảng lập trình hoặc machine learning cơ bản và muốn hiểu cách các kỹ năng đó được đưa vào một workflow AWS thực tế.
+## Ý Kiến Đóng Góp Cải Thiện
 
-Chương trình đòi hỏi tính kỷ luật tự học vì nhiều phần được tự quản lý, nhưng đây cũng là một điểm mạnh. Cách học này giúp người tham gia rèn tính độc lập, thói quen documentation và tư duy kỹ sư thực tế hơn.
+1. **Khảo sát Quota ban đầu:** Nên bổ sung một tài liệu hướng dẫn kiểm tra và xin cấp phát Quota tài nguyên (đặc biệt là SageMaker Training và Endpoints) ngay từ tuần đầu tiên để sinh viên chủ động chuẩn bị.
+2. **Checklist kiểm soát chi phí (Cost Control):** Cung cấp danh mục kiểm tra tài nguyên có phát sinh chi phí duy trì (như SageMaker Endpoint, NAT Gateway) giúp sinh viên có thói quen dọn dẹp (Clean-up) đúng cách, tránh phát sinh chi phí ngoài ý muốn.
+3. **Mẫu kiến trúc tham khảo:** Bổ sung thêm các tài liệu mẫu chuẩn hóa (Reference Architectures) về cách kết hợp S3, SageMaker, Lambda và API Gateway cho các bài toán MLOps căn bản.
+4. **Các cột mốc đánh giá định kỳ (Milestones):** Bổ sung 1-2 buổi Review ngắn giữa kỳ để sinh viên nhận phản hồi trực tiếp từ các anh chị mentor trước khi bước vào giai đoạn hoàn thiện báo cáo cuối cùng.
 
-## Kỳ vọng trong tương lai
+---
 
-Nếu tiếp tục phát triển project, tôi sẽ bắt đầu bằng representative trajectories có independent human labels và thêm adapters cho nhiều agent frameworks. Chỉ sau đó tôi mới đánh giá calibrated thresholds hoặc cost-sensitive learning, pin runtimes tương thích, đồng thời thiết kế canary/rollback controls và một reviewed deployment pipeline riêng cho model đã nhận manual Registry approval.
+## Khuyên Dùng Chương Trình (Recommendation)
+
+Mình chắc chắn sẽ giới thiệu chương trình **First Cloud AI Journey** đến các bạn sinh viên có mong muốn dấn thân vào lĩnh vực Cloud và AI. Đây là một bệ phóng tuyệt vời cho những ai đã có nền tảng lập trình cơ bản và muốn trải nghiệm cách thức đưa một mô hình trí tuệ nhân tạo lên hạ tầng đám mây thực tế. Chương trình đòi hỏi tính tự giác cao, nhưng chính điều đó sẽ giúp sinh viên trưởng thành nhanh chóng về cả tư duy kỹ thuật lẫn tác phong làm việc chuyên nghiệp.
+
+---
+
+## Định Hướng Phát Triển Trong Tương Lai
+
+Nếu tiếp tục mở rộng dự án **AI Coding Agent Risk Scorer**, mình sẽ tập trung vào các hướng phát triển sau:
+- Mở rộng thu thập tập dữ liệu hành vi agent thực tế đa dạng hơn với sự gán nhãn độc lập từ các chuyên gia con người.
+- Phát triển thêm các bộ chuyển đổi (Adapters) hỗ trợ nhiều Framework AI Agent khác nhau.
+- Tối ưu hóa các ngưỡng phân loại rủi ro, đồng bộ triệt để môi trường Runtime và thiết lập quy trình triển khai an toàn (Canary/Rollback Deployment) sau khi mô hình được phê duyệt thủ công trên Model Registry.
