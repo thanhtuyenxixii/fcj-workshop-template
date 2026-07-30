@@ -1,6 +1,6 @@
 ---
-title: "Tuần 12: Kế hoạch nộp bài và bàn giao"
-date: 2024-01-01
+title: "Tuần 12: Dọn dẹp Tài nguyên, Hoàn thiện Báo cáo & Tổng kết"
+date: 2026-08-17
 weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
@@ -8,43 +8,61 @@ pre: " <b> 1.12. </b> "
 
 ## 17/08/2026 - 23/08/2026
 
-**Trạng thái:** Kế hoạch  
-**Hình thức làm việc:** Triển khai cá nhân kết hợp học tập và thảo luận theo nhóm.  
+**Hình thức làm việc:** Tự thực hiện kết hợp thảo luận nhóm.
 **Chương trình:** Workforce Bootcamp - First Cloud AI Journey.
+**Người hướng dẫn (Mentor):** Tự quản lý tiến độ với sự hỗ trợ từ tài liệu AWS.
 
 ## Mục tiêu
 
-Hoàn tất các hoạt động nộp bài và bàn giao sau khi tuần theo lịch bắt đầu, không tái tạo tài nguyên AWS có phí chỉ để làm tài liệu.
+Tiến hành dọn dẹp sạch sẽ toàn bộ tài nguyên đã tạo trên AWS để tránh phát sinh chi phí, hoàn thiện website báo cáo Hugo và viết tự đánh giá/phản hồi thực tập.
 
-## Công việc dự kiến
+## Bối cảnh
 
-- Xác nhận website Hugo song ngữ đã publish và có thể truy cập.
-- Kiểm tra lại các phần bắt buộc, link, hình ảnh và navigation của báo cáo.
-- Nộp link website qua FCAJ Portal → Self-service → Workshop submission.
-- Lưu evidence nộp bài mà không làm lộ credentials hoặc thông tin định danh tài khoản riêng tư.
-- Lưu trữ artifact cuối cùng và xác nhận không còn tài nguyên project có phí đang chạy.
+Tuần cuối cùng của hành trình 12 tuần thực tập tập trung vào việc hủy bỏ hạ tầng an toàn, tổng hợp minh chứng dự án và hoàn thiện toàn bộ tài liệu báo cáo.
 
-## Kế hoạch theo ngày
+## Trọng tâm học tập AWS
 
-| Ngày | Công việc dự kiến |
+- **Quy trình Hủy bỏ Tài nguyên (Decommissioning):** Xóa SageMaker Endpoints, ECS Clusters, NAT Gateways, ECR Images và S3 Buckets đúng trình tự.
+- **Tổng kết & Đánh giá (Retrospective):** Đánh giá các mục tiêu đã đạt được, bài học kinh nghiệm và định hướng phát triển tiếp theo.
+
+## Chi tiết công việc hàng ngày
+
+| Ngày | Công việc đã thực hiện |
 |---|---|
-| 17/08/2026 | Review final submission checklist và các route đã publish. |
-| 18/08/2026 | Kiểm tra lại tính đồng nhất EN/VI và external links. |
-| 19/08/2026 | Xác minh project evidence được lưu giữ và redaction dữ liệu nhạy cảm. |
-| 20/08/2026 | Xác nhận paid-resource absence và cost-control checklist. |
-| 21/08/2026 | Nộp link website đã publish qua FCAJ Portal. |
-| 22/08/2026 | Lưu submission evidence và archive final artifacts. |
-| 23/08/2026 | Hoàn tất bàn giao cuối cùng và reflection cá nhân. |
+| 17/08/2026 | Xóa SageMaker Endpoints, Endpoint Configurations và Models. |
+| 18/08/2026 | Hủy ECS Services, Fargate Tasks, ECR Repositories và NAT Gateways. |
+| 19/08/2026 | Dọn dẹp dữ liệu S3 Buckets tạm và các CloudWatch Log Groups. |
+| 20/08/2026 | Rà soát và hoàn thiện nội dung các file Markdown trên Hugo cho cả 8 phần báo cáo. |
+| 21/08/2026 | Hoàn thành Phần 6 (Tự đánh giá) và Phần 7 (Phản hồi/Đánh giá từ Mentor). |
+| 22/08/2026 - 23/08/2026 | Kiểm thử Build trang Hugo tĩnh và nộp báo cáo thực tập chính thức. |
 
-## Deliverables dự kiến
+## Hoạt động kỹ thuật
 
-- **Link báo cáo song ngữ đã publish.**
-- **Hoàn tất nộp bài trên FCAJ Portal.**
-- **Submission evidence đã loại bỏ thông tin nhạy cảm.**
-- **Final report archive và resource-absence checklist.**
+- Hủy bỏ toàn bộ tài nguyên có tính phí trên AWS, xác nhận số dư không phát sinh thêm qua AWS Cost Explorer.
+- Build và xuất bản trang báo cáo Hugo hoàn chỉnh.
 
-Chưa claim kết quả Tuần 12 hoặc việc nộp bài tại thời điểm 25/07/2026. Trang này chỉ ghi công việc dự kiến; accepted AWS evidence sẽ không được tái tạo để chụp screenshot.
+## Kết quả đạt được (Deliverables)
+
+- **Toàn bộ Worklog 12 tuần hoàn thành chi tiết.**
+- **Tài khoản AWS được dọn dẹp sạch 100%.**
+- **Báo cáo thực tập & Bản tự đánh giá hoàn thành.**
+
+## Thách thức & Giải pháp
+
+**Thách thức:** Đảm bảo không bỏ sót các tài nguyên ẩn (Elastic IPs, EBS Snapshots) gây phát sinh chi phí ngầm.
+
+**Giải pháp:** Sử dụng công cụ AWS Resource Groups & Tag Editor để rà soát và xóa triệt để mọi tài nguyên còn sót lại.
+
+## Đóng góp cho Dự án
+
+Khép lại kỳ thực tập AWS First Cloud AI Journey với một báo cáo đầy đủ, khoa học và hạ tầng tài khoản được quản lý chuyên nghiệp.
+
+
+## Tài liệu tham khảo
+
+- [AWS Deleting Resources Guide](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)
+- [Hugo Static Site Generator Docs](https://gohugo.io/documentation/)
 
 ---
 
-[Trước](/vi/1-worklog/1.11-week11/) | [Quay lại Worklog](/vi/1-worklog/)
+[Quay lại Worklog](/1-worklog/)
