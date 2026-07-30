@@ -1,129 +1,121 @@
 ---
 title: "Event 2"
-date: 2024-01-01
+date: 2024-01-02
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-## Event 2: FiRST CLOUD JOURNEY Tech, DevOps & MNC Culture Seminar
+## Event 2: AWS Enterprise Cloud Architectures & Industry Application
 
-| Field | Information |
+| Attribute | Details |
 |---|---|
-| Event name | FiRST CLOUD JOURNEY Tech, DevOps & MNC Culture Seminar |
-| Date and time | 09:00, 13/06/2026 |
-| Location | 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City |
-| Role | Attendee |
-| Registration purpose | Attend Events |
-| Work shift | Fulltime |
-| Registered participant | Chu Nguyễn Tuấn Anh |
-| University | Trường Đại học Bách khoa |
-| Student ID | 2352022 |
+| Event Name | AWS: Enterprise Cloud Architectures and Industry Application |
+| Date & Time | 01:30 PM, June 13, 2026 |
+| Venue | 26th Floor, Bitexco Financial Tower, 02 Hai Trieu, Saigon Ward, Ho Chi Minh City |
+| Partner Organizations | Cloud Kinetics & Renova Cloud |
+| Attending Role | Participant |
+| Objective | Learn Enterprise Cloud Architectures & Network |
+| Work Shift | Full-time |
+| Participant Name | Bùi Thanh Tuyền |
+| Academic Institution | Ho Chi Minh City University of Technology (HCMUT) |
+| Student ID | 2353284 |
 
-## Overview
+## Event Overview
 
-The **FiRST CLOUD JOURNEY Tech, DevOps & MNC Culture Seminar** was a professional learning event focused on DevOps career reality, technology market trends, data-driven operations in multinational companies, global working culture, and the development path from student curiosity to cloud and AI engineering.
+The specialized event **AWS: Enterprise Cloud Architectures and Industry Application** was an in-depth seminar focusing on designing, migrating, and operating Enterprise Cloud systems on AWS. Featuring expert consultants from **Cloud Kinetics** and **Renova Cloud**—two premier/advanced AWS partners—the seminar provided practical insights into migrating legacy IT systems to AWS, optimizing operational costs (FinOps), implementing defense-in-depth security, and applying Data & AI to large-scale business problems.
 
-Compared with Event 1, this seminar placed stronger emphasis on career direction, engineering mindset, data culture, and the standards required in modern technology organizations. As an attendee, I joined the event to understand not only which technologies are important, but also how engineers create business value, operate reliable systems, and grow in professional environments.
+Attending this event helped bridge the gap between academic theory and enterprise-grade cloud deployment. Real-world case studies across Finance, Retail, and Manufacturing provided valuable perspectives on designing scalable, highly available, and strictly compliant cloud architectures.
 
-## Speakers and Topics
+## Discussion Topics & Speaker Lineup
 
-| Speaker | Topic Area |
+The conference featured technical keynotes and panel discussions covering essential enterprise topics:
+
+| Organization / Speaker | Primary Topic |
 |---|---|
-| Trọng H. Trương | Real work of a DevOps Engineer and DevOps career development |
-| Mr. Đạt Phạm | Data analytics engineering and data-driven operation in business |
-| Mr. Cường Nguyễn | MNC working culture, process improvement, and professional growth mindset |
-| Danh Hoàng Hiếu Nghị | From student curiosity to AI Engineer, AWS Community Builder, and AWS Partner ecosystem |
+| AWS Representative | Designing Enterprise Cloud Architectures via AWS Well-Architected Framework |
+| Cloud Kinetics Experts | Cloud Migration Strategies & Financial Operations (FinOps) Optimization |
+| Renova Cloud Experts | Building Modern Infrastructure, DevOps, and Enterprise Security on AWS |
+| Panel Discussion | Addressing Security Compliance, Data Mesh, and Enterprise Generative AI Adoption |
 
-## Key Sessions and Knowledge Gained
+## Key Knowledge Takeaways
 
-### DevOps Career Reality and Market Trends
+### 1. Enterprise-Grade Architecture (AWS Well-Architected Framework)
 
-The DevOps session helped clarify the real nature of DevOps work. A DevOps Engineer is not simply someone who writes CI/CD pipelines, configures Docker or Kubernetes, or fixes production issues at midnight. The actual role depends on company size, team structure, cloud maturity, application architecture, and operational responsibility.
+The session highlighted applying the **AWS Well-Architected Framework** across its 6 core pillars when designing large-scale systems:
+- **Cost Optimization:** Leveraging Right-sizing, Auto Scaling, Spot Instances, and Savings Plans.
+- **Performance Efficiency:** Architecting decoupled serverless solutions, multi-tier caching, and purpose-built databases.
+- **Reliability:** Designing Multi-AZ and Multi-Region architectures alongside robust Disaster Recovery (DR) plans.
+- **Security:** Enforcing the Principle of Least Privilege, encrypting data at-rest/in-transit, and centralizing identity management via AWS IAM Identity Center.
+- **Operational Excellence & Sustainability:** Automating infrastructure using Infrastructure as Code (IaC) and centralized monitoring.
 
-The speaker discussed common real-world scenarios such as developers reporting environment problems, customers complaining about slow systems, on-call rotation, incident handling, troubleshooting, cost investigation, and ownership clarification. These examples showed that DevOps is both technical and operational: it requires understanding how applications build, test, deploy, log, scale, and fail.
+### 2. Large-Scale Cloud Migration Strategies
 
-The session also shared market observations for Vietnam from 2025 to 2026. Demand for AI/ML, Data, Cloud, Security, and DevOps engineers continues to grow strongly, with higher compensation tied to the ability to solve system-level problems rather than only use tools. This helped me understand that long-term career value comes from fundamentals such as Linux, networking, programming, Git, CI/CD, containers, monitoring, and cloud architecture.
+Experts from **Cloud Kinetics** discussed large-scale legacy migration using the **6 Rs framework** (Rehost, Replatform, Refactor, Repurchase, Retain, Retire):
+- **Assessment & Landing Zone:** Establishing standardized AWS Multi-Account environments using AWS Control Tower and AWS Organizations to isolate resources and budgets across Dev, Staging, and Prod.
+- **Migration Strategy:** Transitioning from simple Lift-and-Shift (Rehost) to Cloud-Native architectures (Refactor) by containerizing applications (ECS/EKS) or leveraging serverless platforms.
 
-### Data Analytics Engineering in Multinational Companies
+### 3. FinOps & Cloud Cost Governance
 
-The data analytics session showed how data work changes depending on industry and business domain. In a technology company such as Kamereo, data analytics can support operational reports, trend dashboards, anomaly detection, GMV analysis, and cross-functional decision-making. In a manufacturing context such as Colgate-Palmolive, data can support IoT machine analysis, production cost reduction, long-term productivity improvement, and digital transformation initiatives.
+A major highlight was managing cloud spend during rapid scaling. **Cloud Kinetics** introduced FinOps (Financial Operations) practices to align Engineering, Finance, and Business teams:
+- Utilizing **AWS Cost Explorer** and **AWS Budgets** for automated cost alerts.
+- Applying detailed Cost Allocation Tags to accurately assign expenses per department/project.
+- Automating non-production (Dev/Test) resource shutdowns outside working hours to eliminate idle costs.
 
-The session emphasized that a Data Analytics Engineer does not only produce reports. The role requires critical thinking, communication, storytelling with data, and root-cause analysis. A useful dashboard should not only show numbers, but also help teams understand what changed, why it changed, and what action should be taken.
+### 4. Enterprise Security & Compliance by Renova Cloud
 
-This perspective was useful for my own internship report because my project also produces metrics and scoring results. The important point is not only to calculate a score, but to explain the meaning of the score and how it supports decision-making.
+Engineers from **Renova Cloud** detailed building a Defense-in-Depth security posture:
+- **Network Security:** Using AWS Transit Gateway, AWS WAF, AWS Shield, and Amazon VPC Peering/PrivateLink to isolate internal traffic from the public Internet.
+- **Identity & Access Management:** Integrating Okta/Active Directory with AWS IAM to enforce SSO and mandatory MFA.
+- **Monitoring & Compliance:** Automating audit logging via AWS CloudTrail, threat detection with Amazon GuardDuty, and compliance auditing using AWS Config.
 
-### MNC Culture and Professional Growth Mindset
+### 5. Data Modernization & Enterprise AI
 
-Another important session introduced the career development mindset in multinational company environments. The speaker described a five-stage growth model:
+Panelists analyzed the shift from monolithic Data Warehouses to **Data Mesh** and **Data Lakehouse** architectures on AWS (combining Amazon S3, AWS Glue, Amazon Redshift, and Amazon Athena). 
 
-1. **Follower**: follows detailed instructions and builds basic skills.
-2. **Learner**: understands solutions but still needs guidance and asks better questions.
-3. **Problem Solver**: independently analyzes problems and proposes useful solutions.
-4. **System Thinker**: sees cross-team impact, financial impact, risks, and long-term system improvement.
-5. **Super Star**: defines broader strategy and helps develop the next generation of system thinkers.
+The discussion also highlighted integrating Generative AI via **Amazon Bedrock**, allowing enterprises to securely leverage internal domain data without risking data exposure.
 
-This model helped me reflect on my current position as a student and intern. At this stage, I should focus on learning actively, asking better questions, documenting work clearly, and moving gradually from task execution to problem-solving.
+## Personal Experience
 
-The session also discussed professional culture such as no-blame post-mortems, continuous improvement, inclusive collaboration, and international standards. In technology teams, a good culture does not blame individuals after incidents. Instead, the team studies the root cause, improves the system, and prevents repeated failures.
+Participating in this event hosted by AWS, Cloud Kinetics, and Renova Cloud offered a highly professional perspective on Cloud Consulting:
+- Observed firsthand how Solutions Architects from AWS Partners advise enterprises and solve complex infrastructure challenges.
+- Learned to select AWS services based on cost efficiency and operational complexity rather than tech trends.
+- Expanded my professional network with cloud engineers, recruiters, and fellow students in the AWS community.
 
-### Global Standards and Digital Responsibility
+## Core Engineering Lessons
 
-The seminar connected technical work with broader digital responsibility. As software, cloud, and data systems become part of critical business operations, engineers need to understand security and compliance expectations such as ISO 27001, SOC 2, and GDPR.
+- **Infrastructure as Code (IaC):** Managing enterprise infrastructure requires IaC tools like AWS CDK, Terraform, or CloudFormation to guarantee consistency and rapid replication.
+- **Security First:** Cloud architecture must prioritize least-privilege access and data protection from day one, rather than treating security as an afterthought.
+- **FinOps Culture:** Great cloud engineers build systems that are not only performant but also cost-optimized.
+- **Multi-Account Mindset:** Avoid running all workloads in a single AWS account; segment environments using AWS Organizations for enhanced security and governance.
 
-The message was that modern digital supply chains need strong technical standards, not only fast development. Cloud engineers and software engineers contribute to protecting digital assets, business continuity, and user trust. This was an important reminder that engineering decisions must consider reliability, privacy, security, and governance.
+## Relevance to My Internship Project
 
-### Pathway from Student Curiosity to AI Engineer and AWS Partner
+The event provided actionable insights for my internship project, **AI Coding Agent Risk Scoring on AWS SageMaker**:
+- **Secure Infrastructure Design:** Implemented VPC Endpoints and Private Subnets for SageMaker Endpoints and AWS Lambda, preventing unauthorized Internet access.
+- **Endpoint Cost Governance:** Applied FinOps principles to select optimal instance types (`ml.m5.xlarge`) for SageMaker Inference and scripted endpoint deletion (clean-up) to avoid unnecessary charges.
+- **Standardized Observability:** Implemented centralized monitoring via Amazon CloudWatch Logs/Metrics and configured automated alarms for unusual traffic spikes on the scoring API.
 
-The final session introduced a development path from student curiosity to practical cloud and AI capability. The journey starts with curiosity, then finding the right learning environment, joining workshops and communities, completing hands-on labs, applying knowledge to school projects, building a portfolio, solving real-world problems, and finally sharing back with the community.
+## Registration Verification
 
-The speaker also introduced the transition from First Cloud Journey to First Cloud AI Journey, together with the AWS Student Builder Group and AWS Community Builder ecosystem. This gave me a clearer view of how a student can grow through community learning, hands-on practice, portfolio building, and contribution.
-
-The lesson was highly relevant to my internship because my own report and workshop website are not only deliverables, but also part of a portfolio that demonstrates learning, implementation, documentation, and reflection.
-
-## Event Experience
-
-The event provided a balanced combination of career guidance, technical discussion, business perspective, and community motivation. I learned from market data about engineering demand and salary ranges, real operational dashboards, DevOps tool landscapes, and professional growth frameworks.
-
-Several parts were especially memorable: the explanation that DevOps is not a “hero role” but a culture and system of collaboration; the examples of using data dashboards to improve business operations; the discussion of no-blame post-mortems; and the encouragement for students to build portfolios and share knowledge back to the community.
-
-The in-person format also helped me practice professional event participation. I followed the agenda, listened to multiple speakers, compared different viewpoints, and connected the lessons to my own cloud and AI learning path.
-
-## Lessons Learned
-
-- DevOps is a collaboration culture and operating model, not only a job title or a set of tools.
-- Strong engineers understand systems, not just tasks. They know how code, infrastructure, cost, security, and user experience affect each other.
-- Data work requires critical thinking. A dashboard is useful only when it helps people understand causes and take action.
-- Professional culture matters. No-blame post-mortems, continuous improvement, and inclusive teamwork make teams more resilient.
-- International standards such as ISO 27001, SOC 2, and GDPR are important for protecting digital assets and building trust.
-- Students can grow by joining communities, doing hands-on labs, applying knowledge to projects, building a portfolio, and sharing back.
-
-## Connection to My Internship Project
-
-This event helped me improve the professional framing of my **AI Coding Agent Risk Scoring on AWS SageMaker** project. The DevOps session reminded me that the project should not be described only as a model or API, but as an operational workflow that includes logs, deployment, monitoring, cleanup, and reliability thinking.
-
-The data analytics session also influenced how I present model output. A risk score should be understandable and useful for decision-making, not just a number. The MNC culture session encouraged me to write clearer documentation, focus on root causes, and treat mistakes or limitations honestly. This aligns with the honest MVP approach used in my report, especially when explaining SageMaker Training quota limits and local XGBoost fallback.
-
-## Registration Evidence
-
-| Registration Detail | Value |
+| Verification Attribute | Recorded Details |
 |---|---|
-| Full name | Chu Nguyễn Tuấn Anh |
-| Email | anh.chunguyentuan@hcmut.edu.vn |
-| Phone | 0962037357 |
-| University | Trường Đại học Bách khoa |
-| Student ID | 2352022 |
-| Registration date | 13/06/2026 |
-| Work shift | Fulltime |
-| Floor | 26th Floor |
-| Purpose | Attend Events |
+| Student Name | Bùi Thanh Tuyền |
+| Primary Email | tuyen.bui2005@hcmut.edu.vn |
+| Contact Phone | 0387697447 |
+| Educational Institution | Ho Chi Minh City University of Technology (HCMUT) |
+| Student ID | 2353284 |
+| Registration Date | June 13, 2026 |
+| Assigned Shift | Full-time |
+| Facility Level | 26th Floor |
+| Engagement Objective | Attend Events |
 
-## Participation Evidence
+## Attendance Proof
 
-I forgot to take a personal photo during this event. The retained evidence is therefore the FCAJ Portal attendance-history record below, which shows my check-in for the 09:00 shift on 13/06/2026 at the 26th Floor. This screenshot documents portal attendance; it is not a personal event photo.
+Because I did not capture a personal photograph during the conference, official attendance is verified via the FCAJ Portal check-in record below. The log confirms my check-in for the 01:30 PM shift on June 13, 2026, at the 26th Floor venue.
 
-![FCAJ Portal attendance-history evidence for Event 2 on 13 June 2026](/images/events/event2-portal-checkin.png)
+![FCAJ Portal attendance-history evidence for Event 2 on 13 June 2026](static/images/events/event2.jfif)
 
 ---
 
-[Previous](/4-eventparticipated/4.1-event1/) | [Back to Events Participated](/4-eventparticipated/)
+[Back to Previous Event](/4-eventparticipated/4.1-event1/) | [Next Event](/4-eventparticipated/4.3-event3/)
