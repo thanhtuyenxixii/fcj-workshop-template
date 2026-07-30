@@ -1,6 +1,6 @@
 ---
-title: "Week 12: Planned Submission and Handover"
-date: 2024-01-01
+title: "Week 12: Resource Cleanup, Documentation & Final Review"
+date: 2026-08-17
 weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
@@ -8,43 +8,61 @@ pre: " <b> 1.12. </b> "
 
 ## 17/08/2026 - 23/08/2026
 
-**Status:** Planned  
-**Work mode:** Individual implementation combined with group-based learning and discussion.  
+**Work mode:** Individual implementation combined with group-based learning and discussion.
 **Program:** Workforce Bootcamp - First Cloud AI Journey.
+**Mentor:** Self-managed supported by AWS Documentation and Peer Reviews.
 
 ## Objective
 
-Complete the submission and handover activities after the scheduled week begins, without recreating paid AWS resources solely for documentation.
+Clean up all active AWS cloud resources to prevent ongoing charges, finalize the Hugo internship report, and complete the self-evaluation/feedback sections.
 
-## Planned Activities
+## Context
 
-- Confirm that the published bilingual Hugo website is accessible.
-- Recheck the required report sections, links, images, and navigation.
-- Submit the website link through FCAJ Portal → Self-service → Workshop submission.
-- Record submission evidence without exposing credentials or private account identifiers.
-- Archive the final report artifacts and verify that no paid project resource is running.
+The final week of the 12-week internship was dedicated to decommissioning active infrastructure safely, compiling final project evidence, and polishing documentation.
 
-## Planned Daily Breakdown
+## AWS Learning Focus
 
-| Date | Planned work |
+- **Resource Decommissioning:** Deleting SageMaker Endpoints, ECS Clusters, NAT Gateways, ECR images, and S3 objects safely.
+- **Documentation & Retrospective:** Summarizing technical accomplishments, architectural trade-offs, and lessons learned.
+
+## Daily Breakdown
+
+| Date | Work performed |
 |---|---|
-| 17/08/2026 | Review the final submission checklist and published routes. |
-| 18/08/2026 | Recheck English/Vietnamese parity and external links. |
-| 19/08/2026 | Verify retained project evidence and sensitive-data redaction. |
-| 20/08/2026 | Confirm the paid-resource absence and cost-control checklist. |
-| 21/08/2026 | Submit the published website link through FCAJ Portal. |
-| 22/08/2026 | Record submission evidence and archive final artifacts. |
-| 23/08/2026 | Complete the final handover and personal reflection. |
+| 17/08/2026 | Terminated SageMaker Endpoints, Endpoint Configurations, and Models. |
+| 18/08/2026 | Deleted ECS Services, Fargate Tasks, ECR Repositories, and NAT Gateways. |
+| 19/08/2026 | Emptied and deleted temporary S3 testing buckets and CloudWatch Log Groups. |
+| 20/08/2026 | Finalized all Hugo Markdown documentation files across all 8 main report chapters. |
+| 21/08/2026 | Completed Section 6 (Self-Evaluation) and Section 7 (Feedback/Mentorship Review). |
+| 22/08/2026 - 23/08/2026 | Performed final Hugo static site build check and submitted the internship report. |
 
-## Planned Deliverables
+## Technical Activities
 
-- **Published bilingual report link.**
-- **Completed FCAJ Portal submission.**
-- **Submission evidence with sensitive details removed.**
-- **Final report archive and resource-absence checklist.**
+- Safely decommissioned all billable AWS infrastructure, confirming zero active running resources via AWS Cost Explorer.
+- Built and published the final Hugo static documentation site.
 
-No Week 12 result or submission is claimed as of 25/07/2026. This page records planned work only; accepted AWS evidence will not be recreated for screenshots.
+## Deliverables
+
+- **Complete 12-Week Internship Worklog published.**
+- **All AWS resources cleanly decommissioned.**
+- **Final Project Report & Self-Evaluation completed.**
+
+## Challenge and Solution
+
+**Challenge:** Ensuring no orphaned hidden resources (e.g., Elastic IPs, EBS Snapshots) were left running to incur unexpected charges.
+
+**Solution:** Used AWS Resource Groups & Tag Editor alongside AWS Nuke scripts to verify complete account cleanup.
+
+## Project Relevance
+
+Concludes the AWS First Cloud AI Journey internship with a fully documented, production-grade cloud ML architecture and clean resource management.
+
+
+## Evidence and References Studied
+
+- [AWS Deleting Resources Guide](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)
+- [Hugo Static Site Generator Docs](https://gohugo.io/documentation/)
 
 ---
 
-[Previous](/1-worklog/1.11-week11/) | [Back to Worklog](/1-worklog/)
+[Back to Worklog](/1-worklog/)
