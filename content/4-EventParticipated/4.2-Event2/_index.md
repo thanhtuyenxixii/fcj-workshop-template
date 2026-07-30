@@ -11,7 +11,7 @@ pre: " <b> 4.2. </b> "
 | Attribute | Details |
 |---|---|
 | Event Name | AWS: Enterprise Cloud Architectures and Industry Application |
-| Date & Time | 01:30 PM, June 13, 2026 |
+| Date & Time | 01:30 PM, July 04, 2026 |
 | Venue | 26th Floor, Bitexco Financial Tower, 02 Hai Trieu, Saigon Ward, Ho Chi Minh City |
 | Partner Organizations | Cloud Kinetics & Renova Cloud |
 | Attending Role | Participant |
@@ -105,7 +105,7 @@ The event provided actionable insights for my internship project, **AI Coding Ag
 | Contact Phone | 0387697447 |
 | Educational Institution | Ho Chi Minh City University of Technology (HCMUT) |
 | Student ID | 2353284 |
-| Registration Date | June 13, 2026 |
+| Registration Date | July 04, 2026 |
 | Assigned Shift | Full-time |
 | Facility Level | 26th Floor |
 | Engagement Objective | Attend Events |
