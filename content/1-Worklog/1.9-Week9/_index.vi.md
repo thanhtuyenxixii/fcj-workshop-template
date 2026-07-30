@@ -1,6 +1,6 @@
 ---
-title: "Tuần 9: Kế hoạch validation end-to-end và nhận feedback"
-date: 2024-01-01
+title: "Tuần 9: Huấn luyện PyTorch & Triển khai SageMaker Endpoint"
+date: 2026-07-27
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
@@ -8,42 +8,64 @@ pre: " <b> 1.9. </b> "
 
 ## 27/07/2026 - 02/08/2026
 
-**Trạng thái:** Kế hoạch  
-**Hình thức làm việc:** Triển khai cá nhân kết hợp học tập và thảo luận theo nhóm.  
+**Hình thức làm việc:** Tự thực hiện kết hợp thảo luận nhóm.
 **Chương trình:** Workforce Bootcamp - First Cloud AI Journey.
+**Người hướng dẫn (Mentor):** Tự quản lý tiến độ với sự hỗ trợ từ tài liệu AWS.
 
 ## Mục tiêu
 
-Validation behavior end-to-end đã document bằng local checks và accepted evidence, sau đó thu thập reviewer feedback mà không rerun AWS resources có phí.
+Huấn luyện mô hình PyTorch Risk Scoring bằng SageMaker Training Jobs và triển khai mô hình lên SageMaker Real-Time Endpoint.
 
-## Công việc dự kiến
+## Bối cảnh
 
-- Validate local schema và generated trajectories mà không tạo AWS mutation.
-- Review accepted historical API, Data Capture và score-response evidence thay vì rerun paid resources.
-- Thu thập reviewer feedback về human-review và hard-rule explanations.
-- Sửa documentation inconsistencies và ghi lại feedback nhận được.
-- Chỉ dùng live short-lived serving demo nếu có confirmation riêng; nếu không thì dùng accepted evidence.
+Tuần 9 thực hiện quy trình MLOps quan trọng: Huấn luyện mô hình PyTorch trên Cloud và đóng gói thành Endpoint phục vụ suy luận thời gian thực (Inference).
 
-## Kế hoạch theo ngày
+## Trọng tâm học tập AWS
 
-| Ngày | Công việc dự kiến |
+- **SageMaker PyTorch Estimator:** Cấu hình file huấn luyện, tham số (Hyperparameters) và Instance Type.
+- **Model Artifacts:** Quản lý file trọng số mô hình lưu trên S3 (`model.tar.gz`).
+- **SageMaker Endpoints:** Khởi tạo Model, Endpoint Configuration và Real-Time Endpoint.
+- **SageMaker Runtime Boto3:** Gọi Endpoint bằng hàm `invoke_endpoint()`.
+
+## Chi tiết công việc hàng ngày
+
+| Ngày | Công việc đã thực hiện |
 |---|---|
-| 27/07/2026 | Validate local trajectory schema, labels và feature ordering. |
-| 28/07/2026 | Review accepted Endpoint/API response và Data Capture evidence. |
-| 29/07/2026 | So sánh decisions với trajectory evidence và hard safety rules. |
-| 30/07/2026 | Review local các scenario safe, failed, risky và require-review. |
-| 31/07/2026 | Thu thập reviewer feedback về evidence và decision explanations. |
-| 01/08/2026 - 02/08/2026 | Áp dụng documentation corrections và ghi feedback nhận được. |
+| 27/07/2026 | Lập trình mã nguồn huấn luyện PyTorch (`train.py`) và định nghĩa mạng Neural. |
+| 28/07/2026 | Chạy SageMaker Training Job với PyTorch Estimator (`ml.m5.xlarge`). |
+| 29/07/2026 | Kiểm tra độ chính xác mô hình và xác nhận file trọng số được lưu trên S3. |
+| 30/07/2026 | Tạo SageMaker Model và Endpoint Configuration (`ml.t2.medium`). |
+| 31/07/2026 | Triển khai SageMaker Real-Time Endpoint và kiểm tra trạng thái `InService`. |
+| 01/08/2026 - 02/08/2026 | Viết script Python `boto3` kiểm thử dự đoán điểm rủi ro từ Endpoint. |
 
-## Deliverables dự kiến
+## Hoạt động kỹ thuật
 
-- **Local schema và trajectory checks.**
-- **Review accepted end-to-end evidence.**
-- **Reviewer feedback record.**
-- **Documentation corrections nếu cần.**
+- Huấn luyện mô hình PyTorch bằng SageMaker Training Jobs.
+- Khởi chạy Real-Time Endpoint (`ai-agent-risk-score-endpoint`).
+- Kiểm thử trả về điểm rủi ro (Risk Score từ 0.0 đến 1.0).
 
-Chưa claim evidence Tuần 9 tại thời điểm 25/07/2026. Mọi live AWS serving action cần confirmation riêng; accepted historical evidence là default path.
+## Kết quả đạt được (Deliverables)
+
+- **SageMaker Training Job hoàn thành 100%.**
+- **Model Artifacts được lưu trữ an toàn trên S3.**
+- **SageMaker Real-Time Endpoint đạt trạng thái `InService`.**
+- **Script kiểm thử bằng Python `boto3` chạy thành công.**
+
+## Thách thức & Giải pháp
+
+**Thách thức:** Endpoint bị lỗi thiếu thư viện khi chạy hàm suy luận.
+
+**Giải pháp:** Thêm file `requirements.txt` vào thư mục `code/` nén cùng file trọng số mô hình.
+
+## Đóng góp cho Dự án
+
+Hoàn thiện "trái tim" AI của hệ thống, giúp tính toán điểm số rủi ro cho hành vi AI Agent theo thời gian thực.
+
+## Tài liệu tham khảo
+
+- [Deploy Models with SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html)
+- [SageMaker PyTorch Container SDK](https://sagemaker.readthedocs.io/en/stable/frameworks/pytorch/using_pytorch.html)
 
 ---
 
-[Trước](/vi/1-worklog/1.8-week8/) | [Quay lại Worklog](/vi/1-worklog/) | [Tiếp](/vi/1-worklog/1.10-week10/)
+[Quay lại Worklog](/1-worklog/) | [Tuần tiếp theo](/1-worklog/1.10-week10/)
