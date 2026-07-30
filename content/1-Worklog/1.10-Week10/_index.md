@@ -1,6 +1,6 @@
 ---
-title: "Week 10: Planned Monitoring and Cost Review"
-date: 2024-01-01
+title: "Week 10: End-to-End AI Service Integration"
+date: 2026-08-03
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
@@ -8,42 +8,62 @@ pre: " <b> 1.10. </b> "
 
 ## 03/08/2026 - 09/08/2026
 
-**Status:** Planned  
-**Work mode:** Individual implementation combined with group-based learning and discussion.  
+**Work mode:** Individual implementation combined with group-based learning and discussion.
 **Program:** Workforce Bootcamp - First Cloud AI Journey.
+**Mentor:** Self-managed supported by AWS Documentation.
 
 ## Objective
 
-Review retained monitoring evidence, cost boundaries, and cleanup state without recreating temporary AWS infrastructure.
+Connect API Gateway and AWS Lambda with the deployed SageMaker Endpoint to form a complete, end-to-end AI scoring web pipeline.
 
-## Planned Activities
+## Context
 
-- Review retained Data Capture, `AgentRiskScorer` metrics, Model Monitor reports, and cleanup evidence.
-- Confirm no paid Endpoint, monitoring schedule, Studio app, dashboard, or alarm is recreated for documentation.
-- Review low-cost retained artifacts and IAM policies.
-- Update cost and cleanup guidance if the accepted evidence inventory changes.
-- Treat Data Capture plus CloudWatch as the durable path and Model Monitor as historical accepted evidence.
+Week 10 focused on joining all individual components built over previous weeks into a unified cloud system: `Client -> API Gateway -> Lambda -> SageMaker Endpoint -> S3/CloudWatch`.
 
-## Planned Daily Breakdown
+## AWS Learning Focus
 
-| Date | Planned work |
+- **Lambda Boto3 SageMaker Runtime:** Invoking `sagemaker-runtime` `invoke_endpoint()` inside Python Lambda.
+- **Request/Response Transformation:** Parsing incoming client JSON, extracting features, formatting endpoint payloads, and returning structured risk levels (`LOW`, `MEDIUM`, `HIGH`).
+- **IAM Policy Integration:** Granting Lambda explicit `sagemaker:InvokeEndpoint` permissions.
+
+## Daily Breakdown
+
+| Date | Work performed |
 |---|---|
-| 03/08/2026 | Review retained Data Capture and `AgentRiskScorer` metrics. |
-| 04/08/2026 | Review Model Monitor reports and documented limitations. |
-| 05/08/2026 | Check the absence checklist for temporary cost-bearing resources. |
-| 06/08/2026 | Review retained S3 artifacts and IAM policies. |
-| 07/08/2026 | Reconcile monitoring and cleanup guidance across the report. |
-| 08/08/2026 - 09/08/2026 | Apply documentation updates only if the evidence inventory changes. |
+| 03/08/2026 | Updated Lambda function code to import `boto3` SageMaker Runtime client. |
+| 04/08/2026 | Added `sagemaker:InvokeEndpoint` permissions to Lambda's IAM Execution Role. |
+| 05/08/2026 | Implemented payload formatting and risk threshold classification (`LOW`/`MED`/`HIGH`) in Lambda. |
+| 06/08/2026 | Connected API Gateway `POST /eval-risk` directly to the updated Lambda function. |
+| 07/08/2026 | Executed End-to-End integration tests using Postman with sample AI agent logs. |
+| 08/08/2026 - 09/08/2026 | Verified raw log archiving in S3 and execution logging in CloudWatch. |
 
-## Planned Deliverables
+## Technical Activities
 
-- **Monitoring evidence review.**
-- **Cost and absence checklist review.**
-- **Retained-artifact and IAM review.**
-- **Updated cleanup guidance if needed.**
+- Integrated API Gateway, Lambda, and SageMaker Real-Time Endpoint.
+- Processed AI Agent trajectory payloads in real time and generated structured risk evaluation responses.
 
-No Week 10 results or evidence are claimed as of 25/07/2026. This plan does not authorize any AWS resource creation or rerun.
+## Deliverables
+
+- **End-to-End AI Risk Scoring Pipeline fully functional.**
+- **Lambda-to-SageMaker Boto3 bridge implemented.**
+- **Integrated Postman test suite passing 100%.**
+
+## Challenge and Solution
+
+**Challenge:** High latency when Lambda invoked the SageMaker Endpoint on cold starts.
+
+**Solution:** Optimized Lambda memory allocation (increased to 1024MB) and reused the Boto3 client connection outside the main handler.
+
+## Project Relevance
+
+Delivers the final working MVP, allowing external applications to query risk evaluations of AI Coding Agent actions via a single API call.
+
+
+## Evidence and References Studied
+
+- [Invoke SageMaker Endpoints using AWS Lambda](https://aws.amazon.com/blogs/machine-learning/call-an-amazon-sagemaker-model-endpoint-from-an-aws-lambda-function/)
+- [AWS SDK for Python (Boto3) SageMaker Runtime](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sagemaker-runtime.html)
 
 ---
 
-[Previous](/1-worklog/1.9-week9/) | [Back to Worklog](/1-worklog/) | [Next](/1-worklog/1.11-week11/)
+[Back to Worklog](/1-worklog/) | [Next](/1-worklog/1.11-week11/)
