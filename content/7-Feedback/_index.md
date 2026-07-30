@@ -6,50 +6,61 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-## Sharing and Feedback
+## Program Reflection & Feedback
 
-This section summarizes my personal reflection and feedback after participating in the **Workforce Bootcamp - First Cloud AI Journey** program at **Amazon Web Services Viet Nam Company Limited**. The comments below are based on my experience studying AWS fundamentals, joining community events, and building the project **End-to-End Risk Scoring and Quality Evaluation System for AI Coding Agents on AWS SageMaker**.
+This section outlines my personal reflections and constructive feedback following my completion of the **Workforce Bootcamp - First Cloud AI Journey** program at **Amazon Web Services Viet Nam Company Limited**. These insights stem from my hands-on journey studying AWS architecture, engaging in community technical events, and engineering the project: **An End-to-End Risk Scoring and Quality Evaluation System for AI Coding Agents on AWS SageMaker**.
+
+---
 
 ## Overall Evaluation
 
-**1. Learning environment**  
-The program created an open and self-directed learning environment. I had space to explore AWS services independently, test commands, read documentation, and build a project from idea to MVP. This style was helpful because it encouraged me to take ownership instead of only following fixed instructions.
+### 1. Learning Environment & Autonomy
+The program cultivated an open, highly autonomous learning environment. Participants are empowered to explore AWS services independently, test architectural concepts, read official technical documentation, and turn an initial concept into a functional MVP. This self-directed structure fostered strong personal ownership and problem-solving initiative.
 
-**2. Support from the program and community**  
-Although there was no fixed mentor for my individual project, I still learned through group discussion, AWS documentation, workshops, and FCAJ community events. The events provided useful technical and career perspectives, especially around cloud engineering, DevOps, security, data analytics, and generative AI use cases.
+### 2. Program Support & Community Engagement
+While the project was self-directed, I benefited greatly from official AWS documentation, technical hands-on workshops, and community events organized by FCAJ. These sessions provided immense value, exposing me to real-world cloud engineering practices across MLOps, Cloud Security, Data Analytics, and Generative AI.
 
-**3. Relevance to my academic major**  
-The internship was relevant to my Computer Science background because it connected programming, data processing, machine learning, API design, and system deployment. University knowledge helped me understand the model and data workflow, while the program helped me apply that knowledge in a cloud environment with AWS services.
+### 3. Alignment with Academic Background
+The internship aligned seamlessly with my Computer Science curriculum at university. It enabled me to connect academic concepts—such as software engineering, data structures, machine learning, and API design—into an integrated, enterprise-grade cloud architecture hosted on AWS.
 
-**4. Learning and skill development opportunities**  
-I improved both technical and professional skills during the program. Technically, I practiced Amazon S3, SageMaker Processing, managed XGBoost Training and Evaluation, Experiments/HPO, Pipeline, Model Registry, historical Endpoint serving, Lambda, API Gateway, Data Capture, Model Monitor, IAM, and CloudWatch. Professionally, I practiced governance design, cost-aware cleanup, evidence collection, honest evaluation, and bilingual workshop writing.
+### 4. Skill Enhancement & Growth
+- **Technical Competencies:** Gained hands-on proficiency across Amazon S3, SageMaker (Processing, Managed Training, HPO, Pipelines, Model Registry, Real-time Endpoints, Model Monitor), AWS Lambda, API Gateway, IAM Policies, Data Capture, and CloudWatch.
+- **Professional Engineering Habits:** Developed strong MLOps governance awareness, cost-control practices, bilingual technical documentation habits, and a rigorous, evidence-based testing methodology.
 
-**5. Program culture and team spirit**  
-The program encouraged learning through sharing and community participation. The technical events made the internship feel broader than an individual project, because I could listen to different speakers and understand how AWS skills are applied in real companies, career paths, and production systems.
+### 5. Program Culture & Community Spirit
+The emphasis on knowledge sharing and community participation was a highlight. Attending technical sessions expanded my perspective beyond a single project, allowing me to learn directly from industry professionals and understand how AWS technologies power real-world production systems and career trajectories.
 
-**6. Internship policies and project scope**  
-The self-learning format was suitable for exploring a personal technical topic. The unavailable Training quota in `ap-southeast-1` first required a bounded historical-serving path; approval in `us-east-1` later enabled the managed ML and governance workflow. This taught me to adapt Region and evidence strategy without conflating a temporary workaround with the final architecture.
+### 6. Technical Adaptability & Execution
+Self-managing a cloud project taught me adaptability when overcoming technical constraints. When facing initial SageMaker Training quota limits in `ap-southeast-1`, I adapted by establishing an interim historical serving pipeline before executing the complete managed workflow upon quota approval in `us-east-1`. This experience taught me to navigate regional resource limitations without sacrificing overall architectural integrity.
+
+---
 
 ## Most Satisfying Experience
 
-The most satisfying part of the internship was completing a governed end-to-end workflow instead of only writing a proposal. Starting from AI coding-agent trajectories, I completed managed Processing, Training, held-out Evaluation, Experiments/HPO, conditional Registry registration, historical serving, Data Capture, Model Monitor, CloudWatch acceptance, and verified cleanup of paid resources.
+The most rewarding outcome was delivering a fully operational, governed **End-to-End MLOps Workflow** on AWS. Successfully orchestrating raw agent behavior logs through SageMaker Processing, XGBoost Training, HPO tuning, automated SageMaker Pipelines, quality gating, serverless API Gateway/Lambda integration, and CloudWatch observability was deeply fulfilling.
 
-Another valuable part was testing the perfect synthetic result rather than defending it. The frozen model's macro F1 fell from `1.00` internally to `0.1212` on the 40-sample External/OOD pilot. That result made the report stronger by showing why manual approval, human review, hard safety rules, and representative human-labeled data remain necessary.
+Equally satisfying was adopting an uncompromised scientific evaluation approach. Rather than over-relying on synthetic training metrics, I rigorously tested the model against external out-of-distribution (OOD) trajectories. Reporting the resulting performance gap reinforced the critical necessity of manual registry approval steps and deterministic safety rules in real-world deployments.
 
-## Suggestions for Improvement
+---
 
-- Provide an early checklist about AWS student-account quotas, especially for SageMaker Training and endpoint-related resources.
-- Provide a cost-control checklist before learners deploy resources that may continue charging, such as SageMaker Endpoints.
-- Share more example architectures for beginner-friendly ML/MLOps projects using S3, SageMaker, Lambda, API Gateway, IAM, and CloudWatch.
-- Add optional milestone reviews so participants can receive feedback before the final report stage.
-- Provide more guidance on what evidence should be captured before cleaning up AWS resources.
+## Suggestions for Program Enhancement
 
-## Recommendation
+1. **Early Quota Onboarding Checklist:** Provide a step-by-step guide during the first week to help students verify and request necessary AWS account quotas (especially for SageMaker Training and Endpoints) early on.
+2. **Cost Management Checklist:** Offer a resource cleanup checklist covering paid resources (such as active SageMaker Endpoints or NAT Gateways) to reinforce cost-conscious habits among learners.
+3. **Reference Architecture Templates:** Share additional reference architecture diagrams illustrating standard integration patterns between S3, SageMaker, Lambda, and API Gateway for MLOps projects.
+4. **Intermediate Review Milestones:** Introduce 1-2 optional milestone check-ins where participants can receive feedback from mentors prior to final report submission.
 
-I would recommend the First Cloud AI Journey program to friends who want to learn cloud computing through practical work. It is especially useful for students who already know programming or machine learning basics and want to understand how those skills fit into a real AWS workflow.
+---
 
-The program requires self-discipline because many tasks are self-managed, but that is also one of its strengths. It helps participants build independence, documentation habits, and a more realistic engineering mindset.
+## Program Recommendation
 
-## Future Expectations
+I highly recommend the **First Cloud AI Journey** program to any student aspiring to build a career in Cloud Computing and AI Engineering. It serves as an exceptional bridge for individuals with foundational programming or ML knowledge who wish to understand how production-grade systems are deployed on AWS. While it demands strong self-discipline, that independence is precisely what builds engineering maturity.
 
-If I continue developing this project, I would first collect representative trajectories with independent human labels and add adapters for more agent frameworks. Only then would I evaluate calibrated thresholds or cost-sensitive learning, pin compatible runtimes, and design canary/rollback controls plus a separate reviewed deployment pipeline for a model that has received manual Registry approval.
+---
+
+## Future Roadmap
+
+To further advance the **AI Coding Agent Risk Scorer** project, my future technical roadmap includes:
+- Expanding the trajectory collection across diverse real-world agent frameworks with independent human annotations.
+- Developing additional data adapters to support emerging AI agent execution formats.
+- Fine-tuning decision thresholds, strictly pinning container runtime environments, and establishing canary/rollback deployment pipelines for models that pass manual Registry approval.
