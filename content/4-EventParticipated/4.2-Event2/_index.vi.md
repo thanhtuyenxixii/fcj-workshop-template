@@ -1,129 +1,121 @@
 ---
 title: "Event 2"
-date: 2024-01-01
+date: 2024-01-02
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-## Event 2: FiRST CLOUD JOURNEY Tech, DevOps & MNC Culture Seminar
+## Event 2: AWS Enterprise Cloud Architectures & Industry Application
 
-| Mục | Thông tin |
+| Thuộc tính | Chi tiết |
 |---|---|
-| Tên sự kiện | FiRST CLOUD JOURNEY Tech, DevOps & MNC Culture Seminar |
-| Ngày và giờ | 09:00, 13/06/2026 |
-| Địa điểm | 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City |
-| Vai trò | Attendee |
-| Mục đích đăng ký | Attend Events |
-| Ca làm việc | Fulltime |
-| Người tham gia | Chu Nguyễn Tuấn Anh |
-| Trường đại học | Trường Đại học Bách khoa |
-| Mã số sinh viên | 2352022 |
+| Tên sự kiện | AWS: Enterprise Cloud Architectures and Industry Application |
+| Thời gian | 01:30 PM, ngày 04/07/2026 |
+| Địa điểm | Tầng 26, Tòa nhà Bitexco Financial, 02 Hải Triều, Phường Sài Gòn, TP. Hồ Chí Minh |
+| Đơn vị đồng hành | Cloud Kinetics & Renova Cloud |
+| Vai trò | Người tham dự |
+| Mục đích tham gia | Học hỏi kiến trúc Cloud Doanh nghiệp & Mở rộng kết nối |
+| Ca làm việc | Full-time |
+| Họ và tên sinh viên | Bùi Thanh Tuyền |
+| Trường Đại học | Trường Đại học Bách khoa - ĐHQG TP.HCM (HCMUT) |
+| Mã số sinh viên | 2353284 |
 
-## Tổng quan
+## Tổng quan sự kiện
 
-**FiRST CLOUD JOURNEY Tech, DevOps & MNC Culture Seminar** là một sự kiện học tập chuyên nghiệp tập trung vào thực tế nghề nghiệp DevOps, xu hướng thị trường công nghệ, vận hành dựa trên dữ liệu trong doanh nghiệp đa quốc gia, văn hóa làm việc toàn cầu và lộ trình phát triển từ sinh viên yêu thích công nghệ đến kỹ sư Cloud/AI.
+Sự kiện chuyên đề **AWS: Enterprise Cloud Architectures and Industry Application** là một hội thảo chuyên sâu tập trung vào cách thiết kế, chuyển đổi và vận hành các hệ thống Điện toán đám mây cấp Doanh nghiệp (Enterprise Cloud). Với sự tham gia của các chuyên gia tư vấn đến từ **Cloud Kinetics** và **Renova Cloud**—hai đối tác Premier/Advanced Partner hàng đầu của AWS—hội thảo mang đến cái nhìn thực tế về hành trình đưa các hệ thống CNTT truyền thống lên AWS, tối ưu hóa chi phí vận hành (FinOps), bảo mật đa tầng và ứng dụng Data/AI vào bài toán kinh doanh quy mô lớn.
 
-So với Event 1, seminar này nhấn mạnh nhiều hơn vào định hướng nghề nghiệp, tư duy kỹ sư, văn hóa dữ liệu và các tiêu chuẩn cần có trong tổ chức công nghệ hiện đại. Với vai trò attendee, tôi tham gia sự kiện để hiểu không chỉ công nghệ nào quan trọng, mà còn hiểu cách kỹ sư tạo ra giá trị kinh doanh, vận hành hệ thống tin cậy và phát triển trong môi trường chuyên nghiệp.
+Tham dự sự kiện này giúp mình lấp đầy khoảng trống giữa kiến thức lý thuyết học ở trường và thực tế triển khai Cloud tại các tập đoàn lớn. Những chia sẻ về bài toán thực tế (Use cases) từ các ngành Tài chính, Bán lẻ và Sản xuất đã mang lại tư duy thiết kế hệ thống có khả năng mở rộng (Scalability), tính sẵn sàng cao (High Availability) và chuẩn bảo mật nghiêm ngặt.
 
-## Diễn giả và chủ đề
+## Các Chủ đề Thảo luận & Diễn giả
 
-| Diễn giả | Chủ đề |
+Sự kiện được chia thành các phiên trình bày kỹ thuật và thảo luận bàn tròn với các nội dung trọng tâm:
+
+| Đơn vị / Diễn giả | Chủ đề trình bày chính |
 |---|---|
-| Trọng H. Trương | Thực tế công việc DevOps Engineer và lộ trình nghề nghiệp DevOps |
-| Mr. Đạt Phạm | Data analytics engineering và vận hành doanh nghiệp dựa trên dữ liệu |
-| Mr. Cường Nguyễn | Văn hóa MNC, cải tiến quy trình và tư duy phát triển chuyên nghiệp |
-| Danh Hoàng Hiếu Nghị | Từ sự tò mò của sinh viên đến AI Engineer, AWS Community Builder và AWS Partner ecosystem |
+| Đại diện AWS | Định hướng Kiến trúc Đám mây Doanh nghiệp chuẩn Khung AWS Well-Architected Framework |
+| Chuyên gia Cloud Kinetics | Chiến lược Chuyển đổi số (Cloud Migration) & Tối ưu hóa Chi phí vận hành (FinOps) |
+| Chuyên gia Renova Cloud | Xây dựng Hạ tầng Hiện đại (Modern Infrastructure), DevOps & Bảo mật Doanh nghiệp trên AWS |
+| Phiên Thảo luận Bàn tròn | Giải quyết thách thức về Tuân thủ bảo mật, Data Mesh và Ứng dụng Generative AI trong Doanh nghiệp |
 
-## Nội dung chính và kiến thức thu được
+## Các Kiến thức Trọng tâm Thu hoạch được
 
-### Thực tế nghề nghiệp DevOps và xu hướng thị trường
+### 1. Kiến trúc Chuẩn Doanh nghiệp (AWS Well-Architected Framework)
 
-Phiên DevOps giúp làm rõ bản chất thực tế của công việc DevOps. Một DevOps Engineer không đơn giản chỉ là người viết CI/CD pipeline, cấu hình Docker/Kubernetes hoặc sửa lỗi production vào nửa đêm. Vai trò thực tế phụ thuộc vào quy mô công ty, cấu trúc đội ngũ, mức độ trưởng thành cloud, kiến trúc ứng dụng và trách nhiệm vận hành.
+Phiên chia sẻ nhấn mạnh tầm quan trọng của việc áp dụng **AWS Well-Architected Framework** dựa trên 6 trụ cột cốt lõi khi thiết kế hệ thống lớn:
+- **Tối ưu hóa Chi phí (Cost Optimization):** Sử dụng Right-sizing, Auto Scaling, Spot Instances và các gói Savings Plans.
+- **Hiệu năng & Khả năng Mở rộng (Performance Efficiency):** Thiết kế hệ thống nhượng quyền Serverless, Caching đa lớp và Database phù hợp với mục đích sử dụng (Purpose-built Databases).
+- **Độ tin cậy (Reliability):** Thiết kế kiến trúc Multi-AZ, Multi-Region và xây dựng quy trình Khôi phục sau thảm họa (Disaster Recovery - DR).
+- **Bảo mật (Security):** Áp dụng mô hình Least Privilege, mã hóa dữ liệu At-rest/In-transit và quản lý định danh tập trung (AWS IAM Identity Center).
+- **Vận hành Xuất sắc & Tối ưu Bền vững:** Tự động hóa hạ tầng bằng Infrastructure as Code (IaC) và giám sát tập trung.
 
-Diễn giả chia sẻ các tình huống thường gặp như developer báo lỗi môi trường, khách hàng phản ánh hệ thống chậm, on-call rotation, incident handling, troubleshooting, điều tra chi phí tài nguyên và làm rõ quyền sở hữu hệ thống. Các ví dụ này cho thấy DevOps vừa mang tính kỹ thuật vừa mang tính vận hành: cần hiểu ứng dụng build, test, deploy, log, scale và fail như thế nào.
+### 2. Chiến dịch Dịch chuyển Hạ tầng (Cloud Migration at Scale)
 
-Phiên này cũng chia sẻ góc nhìn thị trường Việt Nam giai đoạn 2025 - 2026. Nhu cầu cho AI/ML, Data, Cloud, Security và DevOps engineer tăng mạnh, trong đó mức đãi ngộ cao hơn gắn với khả năng giải quyết vấn đề ở cấp độ hệ thống thay vì chỉ biết dùng công cụ. Điều này giúp tôi hiểu rằng giá trị nghề nghiệp dài hạn đến từ nền tảng như Linux, networking, programming, Git, CI/CD, containers, monitoring và cloud architecture.
+Chuyên gia từ **Cloud Kinetics** đã chia sẻ về chiến lược dịch chuyển quy mô lớn cho các doanh nghiệp legacy theo mô hình **6 Rs** (Rehost, Replatform, Refactor, Repurchase, Retain, Retire):
+- **Giai đoạn Đánh giá & Chuẩn bị (Landing Zone):** Xây dựng môi trường AWS Multi-Account chuẩn hóa bằng AWS Control Tower và AWS Organizations để quản lý tài nguyên và chi phí riêng biệt giữa các môi trường Dev, Staging, Prod.
+- **Chiến lược Chuyển đổi:** Tối ưu hóa việc chuyển từ Lift-and-Shift (Rehost) sang mô hình Cloud-Native (Refactor) bằng cách đóng gói ứng dụng thành Container (ECS/EKS) hoặc chuyển sang Serverless.
 
-### Data Analytics Engineering trong doanh nghiệp đa quốc gia
+### 3. Thực thi FinOps & Quản trị Chi phí Cloud
 
-Phiên data analytics cho thấy công việc dữ liệu thay đổi theo ngành nghề và domain kinh doanh. Trong công ty công nghệ như Kamereo, data analytics có thể hỗ trợ báo cáo vận hành, dashboard xu hướng, phát hiện bất thường, phân tích GMV và ra quyết định liên phòng ban. Trong bối cảnh sản xuất như Colgate-Palmolive, dữ liệu có thể hỗ trợ phân tích máy móc IoT, cắt giảm chi phí sản xuất, tối ưu năng suất dài hạn và thúc đẩy chuyển đổi số.
+Một điểm nóng tại hội thảo là bài toán quản lý chi phí khi quy mô Cloud tăng trưởng nhanh. **Cloud Kinetics** đã giới thiệu văn hóa FinOps (Financial Operations) giúp kết hợp giữa đội ngũ Kỹ thuật, Tài chính và Kinh doanh:
+- Sử dụng **AWS Cost Explorer** và **AWS Budgets** để đặt ngưỡng cảnh báo chi phí tự động.
+- Gắn tag (Cost Allocation Tags) chi tiết cho từng tài nguyên để phân bổ chi phí chuẩn xác cho từng phòng ban/dự án.
+- Tự động tắt các tài nguyên thử nghiệm (Dev/Test) ngoài giờ làm việc để tránh lãng phí.
 
-Phiên chia sẻ nhấn mạnh rằng Data Analytics Engineer không chỉ tạo báo cáo. Vai trò này cần tư duy phản biện, kỹ năng giao tiếp, storytelling with data và phân tích nguyên nhân gốc rễ. Một dashboard hữu ích không chỉ hiển thị số liệu, mà còn giúp team hiểu điều gì thay đổi, vì sao thay đổi và nên hành động như thế nào.
+### 4. Bảo mật & Tuân thủ Doanh nghiệp từ Renova Cloud
 
-Góc nhìn này hữu ích cho report thực tập của tôi vì project của tôi cũng tạo ra metrics và scoring result. Điểm quan trọng không chỉ là tính ra score, mà còn phải giải thích score đó có ý nghĩa gì và hỗ trợ decision-making như thế nào.
+Chuyên gia từ **Renova Cloud** đã làm rõ cách xây dựng mô hình bảo mật Chống chịu sâu (Defense-in-Depth):
+- **Bảo mật Mạng:** Sử dụng AWS Transit Gateway, AWS WAF, AWS Shield và Amazon VPC Peering/PrivateLink để cô lập luồng dữ liệu nội bộ khỏi Internet công cộng.
+- **Quản lý Định danh & Truy cập:** Kết hợp Okta/Active Directory với AWS IAM để triển khai xác thực SSO và MFA bắt buộc.
+- **Giám sát & Tuân thủ:** Tự động ghi log bằng AWS CloudTrail, Amazon GuardDuty và đánh giá tuân thủ cấu hình tự động qua AWS Config.
 
-### Văn hóa MNC và tư duy phát triển chuyên nghiệp
+### 5. Hiện đại hóa Dữ liệu & AI trong Doanh nghiệp
 
-Một phiên quan trọng khác giới thiệu tư duy phát triển nghề nghiệp trong môi trường doanh nghiệp đa quốc gia. Diễn giả mô tả mô hình phát triển năng lực gồm năm giai đoạn:
+Phiên thảo luận phân tích xu hướng dịch chuyển từ các kho dữ liệu tập trung (Data Warehouse) sang kiến trúc **Data Mesh** và **Data Lakehouse** trên AWS (kết hợp Amazon S3, AWS Glue, Amazon Redshift và Amazon Athena). 
 
-1. **Follower**: làm theo hướng dẫn chi tiết và xây dựng kỹ năng cơ bản.
-2. **Learner**: hiểu giải pháp nhưng vẫn cần định hướng và biết đặt câu hỏi tốt hơn.
-3. **Problem Solver**: tự phân tích vấn đề và đề xuất giải pháp hữu ích.
-4. **System Thinker**: nhìn thấy tác động liên phòng ban, tác động tài chính, rủi ro và cải tiến hệ thống dài hạn.
-5. **Super Star**: định hình chiến lược rộng hơn và giúp phát triển thế hệ system thinker tiếp theo.
+Nội dung cũng cập nhật cách các doanh nghiệp tích hợp Generative AI vào quy trình vận hành thông qua **Amazon Bedrock**, giúp khai thác dữ liệu nội bộ an toàn mà không lo bị rò rỉ dữ liệu doanh nghiệp ra bên ngoài.
 
-Mô hình này giúp tôi nhìn lại vị trí hiện tại của mình với vai trò sinh viên và intern. Ở giai đoạn này, tôi cần tập trung học chủ động, đặt câu hỏi tốt hơn, tài liệu hóa công việc rõ ràng và dần chuyển từ việc chỉ làm task sang giải quyết vấn đề.
+## Trải nghiệm Cá nhân tại Sự kiện
 
-Phiên chia sẻ cũng nói về văn hóa chuyên nghiệp như no-blame post-mortem, continuous improvement, inclusive collaboration và tiêu chuẩn quốc tế. Trong team công nghệ, văn hóa tốt không đổ lỗi cá nhân khi có incident. Thay vào đó, team phân tích root cause, cải thiện hệ thống và ngăn lỗi lặp lại.
+Tham dự sự kiện do AWS, Cloud Kinetics và Renova Cloud phối hợp tổ chức mang lại cho mình một góc nhìn rất chuyên nghiệp về ngành tư vấn Điện toán đám mây (Cloud Consulting). Mình đã có cơ hội:
+- Trực tiếp quan sát cách các Solution Architect đại diện cho Partner tư vấn và giải quyết các bài toán hóc chuẩn doanh nghiệp.
+- Học hỏi tư duy chọn lựa dịch vụ AWS dựa trên bài toán chi phí và độ phức tạp vận hành thay vì chỉ chọn theo xu hướng công nghệ.
+- Mở rộng mạng lưới kết nối (Networking) với các anh chị kỹ sư, chuyên gia tuyển dụng và các bạn sinh viên cùng đam mê trong cộng đồng AWS.
 
-### Tiêu chuẩn toàn cầu và trách nhiệm số
+## Các Bài học Chuyên môn Cốt lõi
 
-Seminar kết nối công việc kỹ thuật với trách nhiệm số rộng hơn. Khi software, cloud và data system trở thành một phần quan trọng của vận hành doanh nghiệp, kỹ sư cần hiểu các kỳ vọng về security và compliance như ISO 27001, SOC 2 và GDPR.
+- **Hạ tầng là Mã nguồn (IaC):** Việc quản lý hệ thống doanh nghiệp bắt buộc phải sử dụng các công cụ IaC như AWS CDK, Terraform hoặc CloudFormation để đảm bảo tính đồng nhất và khả năng nhân bản nhanh chóng.
+- **Bảo mật là Ưu tiên số 1 (Security First):** Mọi thiết kế kiến trúc Cloud phải bắt đầu từ việc phân quyền tối thiểu (Least Privilege) và bảo vệ dữ liệu ngay từ đầu, không phải là bước bổ sung sau khi hoàn thành hệ thống.
+- **Văn hóa FinOps:** Kỹ sư Cloud giỏi không chỉ xây dựng được hệ thống chạy tốt, mà còn phải biết xây dựng hệ thống với chi phí tối ưu nhất cho doanh nghiệp.
+- **Tư duy Multi-Account:** Không bao giờ gộp chung tất cả ứng dụng vào một tài khoản AWS duy nhất; cần phân chia tài khoản bằng AWS Organizations để quản trị an toàn.
 
-Thông điệp chính là chuỗi cung ứng số hiện đại cần tiêu chuẩn kỹ thuật mạnh, không chỉ tốc độ phát triển nhanh. Cloud engineer và software engineer góp phần bảo vệ tài sản số, tính liên tục kinh doanh và niềm tin của người dùng. Đây là lời nhắc quan trọng rằng quyết định kỹ thuật cần xét đến reliability, privacy, security và governance.
+## Giá trị Thực tế Áp dụng vào Dự án Thực tập
 
-### Lộ trình từ sinh viên tò mò đến AI Engineer và AWS Partner
+Sự kiện mang lại những góc nhìn rất giá trị để mình hoàn thiện dự án thực tập **AI Coding Agent Risk Scoring on AWS SageMaker**:
+- **Thiết kế Hạ tầng Chuẩn:** Áp dụng kiến trúc bảo mật với VPC Endpoints và Private Subnets cho SageMaker Endpoint và AWS Lambda, giúp ngăn chặn truy cập trái phép từ Internet.
+- **Quản lý Chi phí Endpoint:** Vận dụng bài học FinOps để chọn đúng kích thước Instance (`ml.m5.xlarge`) cho SageMaker Inference và viết script tự động xóa Endpoint khi không sử dụng (Clean-up) để tránh phát sinh chi phí ngoài ý muốn.
+- **Chuẩn hóa Giám sát:** Áp dụng mô hình giám sát tập trung qua Amazon CloudWatch Logs/Metrics và cấu hình cảnh báo tự động khi phát hiện đợt truy cập bất thường vào scoring API.
 
-Phiên cuối giới thiệu lộ trình phát triển từ sự tò mò của sinh viên đến năng lực cloud và AI thực tế. Hành trình bắt đầu từ curiosity, sau đó tìm môi trường học phù hợp, tham gia workshop và cộng đồng, hoàn thành hands-on labs, áp dụng kiến thức vào school projects, xây portfolio, giải quyết bài toán thực tế và cuối cùng chia sẻ lại cho cộng đồng.
+## Xác minh Đăng ký Participant
 
-Diễn giả cũng giới thiệu sự chuyển đổi từ First Cloud Journey sang First Cloud AI Journey, cùng hệ sinh thái AWS Student Builder Group và AWS Community Builder. Nội dung này giúp tôi có góc nhìn rõ hơn về cách một sinh viên có thể phát triển thông qua community learning, thực hành, xây portfolio và đóng góp trở lại.
-
-Bài học này rất liên quan đến kỳ thực tập của tôi vì report và workshop website không chỉ là deliverables, mà còn là một phần của portfolio thể hiện quá trình học, triển khai, tài liệu hóa và reflection.
-
-## Trải nghiệm tại sự kiện
-
-Sự kiện mang lại sự kết hợp cân bằng giữa định hướng nghề nghiệp, thảo luận kỹ thuật, góc nhìn kinh doanh và động lực cộng đồng. Tôi học được từ các dữ liệu thị trường về nhu cầu tuyển dụng và salary ranges, các dashboard vận hành thực tế, DevOps tool landscape và framework phát triển chuyên nghiệp.
-
-Một số điểm để lại ấn tượng mạnh gồm: cách giải thích DevOps không phải là “hero role” mà là văn hóa và hệ thống cộng tác; ví dụ sử dụng dashboard dữ liệu để cải thiện vận hành doanh nghiệp; thảo luận về no-blame post-mortem; và lời khuyến khích sinh viên xây portfolio cũng như chia sẻ kiến thức lại cho cộng đồng.
-
-Hình thức tham gia trực tiếp cũng giúp tôi rèn luyện tác phong chuyên nghiệp. Tôi theo dõi agenda, lắng nghe nhiều diễn giả, so sánh các góc nhìn khác nhau và liên hệ bài học với lộ trình học cloud và AI của bản thân.
-
-## Bài học rút ra
-
-- DevOps là văn hóa cộng tác và mô hình vận hành, không chỉ là chức danh hoặc bộ công cụ.
-- Kỹ sư giỏi hiểu hệ thống, không chỉ hiểu task. Họ biết code, infrastructure, cost, security và user experience ảnh hưởng lẫn nhau như thế nào.
-- Công việc dữ liệu cần tư duy phản biện. Dashboard chỉ hữu ích khi giúp người dùng hiểu nguyên nhân và đưa ra hành động.
-- Văn hóa chuyên nghiệp rất quan trọng. No-blame post-mortem, continuous improvement và inclusive teamwork giúp team bền vững hơn.
-- Các tiêu chuẩn quốc tế như ISO 27001, SOC 2 và GDPR quan trọng trong việc bảo vệ tài sản số và xây dựng niềm tin.
-- Sinh viên có thể phát triển bằng cách tham gia cộng đồng, làm hands-on labs, áp dụng kiến thức vào project, xây portfolio và chia sẻ lại.
-
-## Liên hệ với project thực tập
-
-Sự kiện này giúp tôi cải thiện cách trình bày chuyên nghiệp cho project **AI Coding Agent Risk Scoring on AWS SageMaker**. Phiên DevOps nhắc tôi rằng project không nên chỉ được mô tả như một model hoặc API, mà nên là một operational workflow có logs, deployment, monitoring, cleanup và reliability thinking.
-
-Phiên data analytics cũng ảnh hưởng đến cách tôi trình bày model output. Risk score cần dễ hiểu và hữu ích cho decision-making, không chỉ là một con số. Phiên văn hóa MNC khuyến khích tôi viết tài liệu rõ hơn, tập trung vào root cause và trình bày limitations một cách trung thực. Điều này phù hợp với hướng honest MVP trong report, đặc biệt khi giải thích giới hạn SageMaker Training quota và local XGBoost fallback.
-
-## Minh chứng đăng ký
-
-| Chi tiết đăng ký | Giá trị |
+| Thuộc tính xác minh | Thông tin ghi nhận |
 |---|---|
-| Họ và tên | Chu Nguyễn Tuấn Anh |
-| Email | anh.chunguyentuan@hcmut.edu.vn |
-| Số điện thoại | 0962037357 |
-| Trường đại học | Trường Đại học Bách khoa |
-| Mã số sinh viên | 2352022 |
-| Ngày đăng ký | 13/06/2026 |
-| Ca làm việc | Fulltime |
-| Tầng | 26th Floor |
-| Mục đích | Attend Events |
+| Họ và tên sinh viên | Bùi Thanh Tuyền |
+| Email chính | tuyen.bui2005@hcmut.edu.vn |
+| Số điện thoại liên hệ | 0387697447 |
+| Trường Đại học | Trường Đại học Bách khoa - ĐHQG TP.HCM (HCMUT) |
+| Mã số sinh viên | 2353284 |
+| Ngày đăng ký | Ngày 04 tháng 07 năm 2026 |
+| Ca đăng ký | Fulltime |
+| Vị trí / Tầng | Tầng 26 |
+| Mục đích | Tham dự sự kiện |
 
-## Bằng chứng tham gia
+## Minh chứng Tham dự
 
-Tôi đã quên chụp ảnh cá nhân trong sự kiện này. Vì vậy, evidence còn được lưu là lịch sử điểm danh trên FCAJ Portal bên dưới, thể hiện lượt check-in cho ca 09:00 ngày 13/06/2026 tại Tầng 26. Screenshot này chứng minh việc điểm danh trên portal, không phải ảnh cá nhân tại sự kiện.
+Do không chụp ảnh cá nhân trong thời gian diễn ra hội thảo, minh chứng tham dự chính thức được xác minh thông qua bản ghi lịch sử điểm danh trên Hệ thống Portal FCAJ dưới đây. Bản ghi xác nhận thông tin đăng ký và lượt check-in của mình cho ca 01:30 chiều ngày 13/06/2026 tại địa điểm Tầng 26.
 
-![Evidence lịch sử điểm danh FCAJ Portal cho Event 2 ngày 13/06/2026](/images/events/event2-portal-checkin.png)
+![Minh chứng điểm danh trên Portal FCAJ cho Event 2 ngày 13/06/2026](static/images/events/event2.jfif)
 
 ---
 
-[Trước](/vi/4-eventparticipated/4.1-event1/) | [Quay lại Events Participated](/vi/4-eventparticipated/)
+[Quay lại Sự kiện Trước](/4-eventparticipated/4.1-event1/) | [Sự kiện Tiếp theo](/4-eventparticipated/4.3-event3/)
