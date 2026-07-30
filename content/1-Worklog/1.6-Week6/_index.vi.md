@@ -1,6 +1,6 @@
 ---
-title: "Tuần 6: Training và đánh giá XGBoost"
-date: 2024-01-01
+title: "Tuần 6: Triển khai ECS Fargate & CI/CD"
+date: 2026-07-06
 weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
@@ -8,86 +8,61 @@ pre: " <b> 1.6. </b> "
 
 ## 06/07/2026 - 12/07/2026
 
-**Hình thức làm việc:** Triển khai cá nhân kết hợp học tập và thảo luận theo nhóm.
+**Hình thức làm việc:** Tự thực hiện kết hợp thảo luận nhóm.
 **Chương trình:** Workforce Bootcamp - First Cloud AI Journey.
-**Mentor:** Không có mentor cố định; công việc được tự quản lý, kết hợp tài liệu, tutorial và thảo luận với các bạn học.
+**Người hướng dẫn (Mentor):** Tự quản lý tiến độ với sự hỗ trợ từ tài liệu AWS.
 
 ## Mục tiêu
 
-Train scoring model đầu tiên và đánh giá bằng các metric ưu tiên phát hiện risky-run và hallucinated-success.
+Triển khai Container ứng dụng lên Amazon ECS Fargate và tự động hóa quy trình CI/CD qua Azure DevOps / GitHub Actions.
 
 ## Bối cảnh
 
-Sau feature engineering, project cần supervised model để chuyển tabular behavior features thành decision signal. XGBoost được chọn vì phù hợp với structured tabular data và được SageMaker hỗ trợ.
+Tuần 6 vận hành ứng dụng trên nền tảng Serverless Container bằng AWS Fargate giúp không cần quản lý máy chủ EC2 thủ công.
 
-## AWS services và kiến thức đã tìm hiểu
+## Trọng tâm học tập AWS
 
-Tuần này tập trung vào khái niệm model training trên AWS và giới hạn thực tế của student-account quotas. Tôi tìm hiểu SageMaker Training workflow dự kiến trước khi quyết định dùng local XGBoost fallback.
+- **Kiến trúc Amazon ECS:** Task Definitions, Task Execution Roles, Services và Clusters.
+- **AWS Fargate:** Cơ chế chạy Container Serverless.
+- **CI/CD Pipeline:** Tự động hóa build Docker Image, push ECR và cập nhật ECS Service.
 
-- **SageMaker Training purpose:** Học rằng SageMaker Training chạy model training jobs trên managed infrastructure và ghi trained artifacts trở lại S3.
-- **Built-in XGBoost:** Rà soát SageMaker support cho XGBoost và lý do nó phù hợp với tabular classification tasks.
-- **Training input channels:** Tìm hiểu cách training và validation CSV files từ S3 được truyền vào training job.
-- **Training output artifact:** Rà soát cách một completed training job thường tạo model artifacts lưu trong S3.
-- **Instance type selection:** Học rằng training jobs cần ML instance quotas khả dụng, có thể khác nhau theo account và Region.
-- **AWS Service Quotas:** Kiểm tra quota limitation và ghi nhận tài khoản sinh viên không chạy được managed training job dự kiến.
-- **Local fallback:** Dùng local XGBoost training để project tiếp tục được, đồng thời document SageMaker Training là planned nhưng unavailable.
-- **Evaluation focus:** Tìm hiểu vì sao safety-oriented metrics như risky recall và false-negative rate có ý nghĩa hơn accuracy đơn thuần trong risk-scoring project.
-
-Tuần này thể hiện rằng tôi đã tìm hiểu managed training path của AWS trước, sau đó ra quyết định triển khai dựa trên ràng buộc thật của account thay vì trình bày sai kết quả.
-
-> **Trạng thái lịch sử của tuần này:** Trong Tuần 6, quota Training tại `ap-southeast-1` chưa khả dụng nên local XGBoost được dùng để tiếp tục project. Sau khi quota `ml.m5.large` riêng được duyệt tại `us-east-1`, managed Training hoàn tất ở Tuần 8. Các ảnh dưới đây vẫn là evidence đúng của quyết định trong Tuần 6, không phải trạng thái cuối của managed lifecycle.
-
-## Bảng công việc theo ngày
+## Chi tiết công việc hàng ngày
 
 | Ngày | Công việc đã thực hiện |
 |---|---|
-| 06/07/2026 | Chuẩn bị processed CSV files cho model training và chọn XGBoost cho tabular classification. |
-| 07/07/2026 | Căn chỉnh training theo SageMaker Training và kiểm tra giới hạn quota của account. |
-| 08/07/2026 | Dùng local XGBoost training làm fallback khi managed training quota không khả dụng. |
-| 09/07/2026 | Tạo evaluation metrics gồm accuracy, macro F1, risky recall và các metric liên quan false negative. |
-| 10/07/2026 | Đóng gói model outputs và verify folder model artifact. |
-| 11/07/2026 - 12/07/2026 | Chụp evaluation, model artifact và quota screenshots để tài liệu MVP trung thực hơn. |
+| 06/07/2026 | Tạo ECS Task Definition liên kết với Image trên ECR (0.5 vCPU, 1GB RAM). |
+| 07/07/2026 | Khởi tạo ECS Cluster và triển khai Service trên Fargate thuộc Private Subnet. |
+| 08/07/2026 | Cấu hình Pipeline CI/CD trên Azure DevOps / GitHub Actions. |
+| 09/07/2026 | Tự động hóa build Image, đẩy lên ECR và Trigger cập nhật ECS khi có commit mới. |
+| 10/07/2026 | Kiểm thử quy trình cập nhật không gián đoạn (Rolling Update). |
+| 11/07/2026 - 12/07/2026 | Thu thập log chạy Pipeline và cập nhật báo cáo. |
 
+## Hoạt động kỹ thuật
 
-## Công việc kỹ thuật
+- Khai báo ECS Task Definition chứa biến môi trường trỏ về S3 Bucket.
+- Xây dựng Pipeline tự động chạy kiểm thử, đóng gói Docker và cập nhật ECS.
 
-- Chuẩn bị training data từ processed CSV files và chọn target labels cho classification.
-- Thiết kế workflow theo SageMaker Training, đồng thời ghi rõ managed training quota bị chặn trong AWS account sinh viên.
-- Dùng local XGBoost training làm fallback thực tế để project vẫn tạo được model artifact và tiếp tục deploy endpoint.
-- Đánh giá accuracy, macro F1, risky recall, risky false-negative rate và hallucinated-success recall, nhấn mạnh false negatives vì bỏ sót hành vi rủi ro nghiêm trọng hơn việc yêu cầu review.
+## Kết quả đạt được (Deliverables)
 
-## Deliverables
+- **ECS Fargate Cluster hoạt động ổn định.**
+- **Tuyến CI/CD tự động hóa 100% từ Git đến AWS.**
+- **Kiểm thử cập nhật ứng dụng Rolling Update thành công.**
 
-- **Train XGBoost model local.**
-- **Tạo evaluation report.**
-- **Ghi rõ giới hạn quota Tuần 6; managed retry được chuyển sang tuần sau.**
-- **Chuẩn bị model artifact để đóng gói.**
+## Thách thức & Giải pháp
 
-## Khó khăn và cách xử lý
+**Thách thức:** ECS Task trên Private Subnet không kéo được Image từ ECR về.
 
-**Khó khăn:** Quota của AWS account chặn SageMaker Training job dự kiến, nên project cần tránh trình bày sai rằng managed training đã hoàn tất.
+**Giải pháp:** Kiểm tra lại tuyến định tuyến NAT Gateway và cấu hình ECR VPC Endpoint.
 
-**Cách xử lý:** Báo cáo giữ local training như fallback trung thực của Tuần 6. Managed SageMaker Training được ghi ở tuần sau, khi quota riêng tại `us-east-1` khả dụng và job thực sự hoàn tất.
+## Đóng góp cho Dự án
 
-## Liên hệ với project chính
+Đảm bảo mô-đun đánh giá AI Agent luôn được cập nhật tự động mỗi khi bổ sung tính năng mới.
 
-Tuần này đóng góp vào MVP cuối bằng cách củng cố luồng từ **bằng chứng hành vi của AI coding agent** đến **workflow đánh giá rủi ro trên AWS**. Nội dung giúp workshop cuối không chỉ là giải thích khái niệm, mà còn bám theo đúng trình tự triển khai thực tế của project.
+## Tài liệu tham khảo
 
-## Ảnh bằng chứng
-
-![XGBoost evaluation report](/images/worklog/week06-xgboost-evaluation.png)
-
-![Folder local model artifact](/images/worklog/week06-model-artifact-local.png)
-
-![Bằng chứng SageMaker Training quota](/images/worklog/week06-sagemaker-training-quota.png)
-
-Các ảnh chụp thể hiện kết quả đánh giá XGBoost local, model artifact đã tạo và bằng chứng SageMaker Training quota giải thích vì sao local training được dùng như fallback thực tế.
-
-## Bằng chứng và tài liệu tham khảo đã tìm hiểu
-
-- [XGBoost algorithm with SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html)
-- [SageMaker training jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-training.html)
+- [Amazon ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
+- [AWS Fargate Overview](https://aws.amazon.com/fargate/)
 
 ---
 
-[Trước](/vi/1-worklog/1.5-week5/) | [Quay lại Worklog](/vi/1-worklog/) | [Tiếp](/vi/1-worklog/1.7-week7/)
+[Quay lại Worklog](/1-worklog/) | [Tuần tiếp theo](/1-worklog/1.7-week7/)
