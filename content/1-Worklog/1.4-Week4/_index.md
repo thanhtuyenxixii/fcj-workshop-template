@@ -1,6 +1,6 @@
 ---
-title: "Week 4: S3 Data Layout and IAM Preparation"
-date: 2024-01-01
+title: "Week 4: Serverless API Pipeline with Lambda & API Gateway"
+date: 2026-06-22
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
@@ -10,80 +10,60 @@ pre: " <b> 1.4. </b> "
 
 **Work mode:** Individual implementation combined with group-based learning and discussion.
 **Program:** Workforce Bootcamp - First Cloud AI Journey.
-**Mentor:** No fixed mentor assigned; work was self-managed and supported by documentation, tutorials, and peer discussion.
+**Mentor:** Self-managed supported by AWS Documentation.
 
 ## Objective
 
-Prepare the AWS storage and permission foundation needed to move data and artifacts through the MVP workflow safely.
+Develop a serverless API ingestion pipeline using Amazon API Gateway and AWS Lambda to collect AI Agent execution logs.
 
 ## Context
 
-Before running SageMaker jobs, the project needed a clear S3 layout and IAM plan. This reduced confusion when raw logs, processed CSV files, and model artifacts moved between local development, SageMaker, Lambda, and the endpoint.
+Week 4 created the entry point for external AI coding agent execution events. The goal was to build a lightweight HTTP API endpoint that validates JSON payloads and stores raw agent logs into S3.
 
 ## AWS Learning Focus
 
-This week focused on Amazon S3 and IAM because they are the foundation for most later AWS services in the project. Before running SageMaker Processing, I needed to understand how data paths and permissions should be organized.
-
-- **Amazon S3 bucket usage:** Studied how one bucket can store multiple project areas using prefixes instead of separate physical folders.
-- **S3 prefix design:** Planned the project layout with `raw/` for JSONL logs, `processed/` for CSV outputs, and `models/` for model artifacts.
-- **AWS CLI operations:** Practiced or reviewed commands for listing buckets, uploading files, checking object paths, and verifying whether expected outputs exist in S3.
-- **S3 URI format:** Learned how paths such as `s3://bucket/prefix/file` are passed into SageMaker jobs and deployment scripts.
-- **IAM execution role:** Studied why SageMaker needs an execution role to read input data from S3 and write output data back.
-- **Least-privilege access:** Reviewed why roles should only receive the permissions needed for the workflow, rather than broad administrator access.
-- **Evidence collection:** Used S3 screenshots and object paths as durable evidence because S3 artifacts can remain after temporary compute resources are cleaned up.
-
-This AWS learning made the project workflow more repeatable because all later processing, training, and deployment steps depended on stable S3 paths and correct IAM permissions.
+- **AWS Lambda Function Development:** Written in Python 3.11 using `boto3` to handle JSON payloads.
+- **Amazon API Gateway:** Configured REST API resources, Lambda Proxy Integration, Request Validation, and CORS.
+- **Amazon CloudWatch Logs:** Configured automated execution logs and error tracking.
 
 ## Daily Breakdown
 
 | Date | Work performed |
 |---|---|
-| 22/06/2026 | Planned the S3 prefix structure for raw logs, processed datasets, and model artifacts. |
-| 23/06/2026 | Created or verified the project S3 bucket and checked the expected folder layout. |
-| 24/06/2026 | Reviewed SageMaker execution role requirements for reading input data and writing processed outputs. |
-| 25/06/2026 | Reviewed Lambda role requirements for CloudWatch logging and SageMaker Runtime invocation. |
-| 26/06/2026 | Prepared AWS CLI commands for checking S3 paths and repeatable evidence collection. |
-| 27/06/2026 - 28/06/2026 | Captured S3 and IAM screenshots and documented the resource naming convention. |
-
+| 22/06/2026 | Defined the JSON schema for AI Agent execution trajectory logs. |
+| 23/06/2026 | Developed the Python Lambda function `agent-risk-ingest-fn`. |
+| 24/06/2026 | Created the API Gateway REST API with resource `POST /score`. |
+| 25/06/2026 | Configured Lambda Proxy Integration and CORS headers. |
+| 26/06/2026 | Granted S3 write permissions to the Lambda IAM Execution Role. |
+| 27/06/2026 - 28/06/2026 | Executed Postman integration tests and verified CloudWatch logs. |
 
 ## Technical Activities
 
-- Planned S3 prefixes for raw trajectory logs, processed train/validation/test datasets, and trained model artifacts.
-- Reviewed least-privilege access patterns for SageMaker execution roles, Lambda execution roles, S3 read/write permissions, and SageMaker Runtime invocation.
-- Prepared AWS CLI commands for uploading raw JSONL logs, listing generated outputs, and checking artifact locations.
-- Documented environment details used later in the report, including region, account-scoped bucket naming, role naming, and resource cleanup expectations.
+- Built an API Gateway REST API connected to AWS Lambda.
+- Implemented payload validation logic in Python to filter malformed execution logs before saving to S3.
+- Enabled CloudWatch Log Groups for API Gateway and Lambda execution tracing.
 
 ## Deliverables
 
-- **S3 data layout prepared.**
-- **IAM role responsibilities clarified.**
-- **AWS CLI workflow drafted.**
-- **Resource naming convention documented.**
+- **Serverless Ingestion API live (`POST /score`).**
+- **Python Ingestion Lambda Function operational.**
+- **Postman API test suite verified.**
 
 ## Challenge and Solution
 
-**Challenge:** IAM can easily become either too permissive or too restrictive during early demos.
+**Challenge:** Handling CORS errors when invoking API Gateway from external test environments.
 
-**Solution:** The permissions were reasoned service by service: SageMaker needed S3 access for processing and model artifacts, Lambda needed SageMaker Runtime access, and CloudWatch logging was required for debugging.
+**Solution:** Configured CORS options in API Gateway and explicitly returned `Access-Control-Allow-Origin` headers in the Lambda response object.
 
 ## Project Relevance
 
-This week contributed to the final MVP by strengthening the path from **AI coding-agent behavior evidence** to an **AWS-based risk scoring workflow**. The work helped ensure that the final workshop is not only a conceptual explanation, but also follows the actual implementation sequence used in the project.
-
-## Evidence Screenshots
-
-![S3 bucket layout for project data](/images/worklog/week04-s3-layout.png)
-
-![IAM role used by the AWS workflow](/images/worklog/week04-iam-role.png)
-
-The screenshots show the storage and permission foundation used before running the AWS-side processing workflow.
+Serves as the front door for receiving agent behavior data, feeding the downstream ML risk scoring pipeline.
 
 ## Evidence and References Studied
 
-- [Amazon S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
-- [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
-- [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/)
+- [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+- [Amazon API Gateway Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
 ---
 
-[Previous](/1-worklog/1.3-week3/) | [Back to Worklog](/1-worklog/) | [Next](/1-worklog/1.5-week5/)
+[Back to Worklog](/1-worklog/) | [Next](/1-worklog/1.5-week5/)
