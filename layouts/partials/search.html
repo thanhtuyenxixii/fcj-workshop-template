@@ -1,0 +1,13 @@
+{{ if .Site.IsMultilingual }}
+<div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <data data-search-input id="search-by" type="search" placeholder="{{T "Search-placeholder"}}"></data>
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+{{ else }}
+<div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <data data-search-input id="search-by" type="search" placeholder="{{T "Search-placeholder"}}"></data>
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+{{ end }}
