@@ -7,15 +7,11 @@ chapter: false
 
 # Báo cáo thực tập
 
-## Thông tin sinh viên
-
-<img src="/images/student-avatar.png" alt="Chu Nguyễn Tuấn Anh" width="220">
-
 | Mục | Thông tin |
 |---|---|
-| Họ tên | Chu Nguyễn Tuấn Anh |
-| Số điện thoại | 0962037357 |
-| Email | anh.chunguyentuan@hcmut.edu.vn |
+| Họ tên | Bùi Thanh Tuyền  |
+| Số điện thoại | 0387697447 |
+| Email | tuyen.bui2005@hcmut.edu.vn |
 | Trường | Ho Chi Minh City University of Technology , HCMUT |
 | Chuyên ngành | Computer Science |
 | Công ty thực tập | Amazon Web Services Viet Nam Company Limited |
