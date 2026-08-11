@@ -9,8 +9,23 @@
   <div class="highlightable">
     <ul class="topics">
       {{ $currentNode := . }}
-      {{ range .Site.Home.Sections }}
-        {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+      {{ range .Site.Home.Sections.ByWeight }}
+        <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if .IsAncestor $currentNode}}parent{{end}} {{if eq .RelPermalink $currentNode.RelPermalink}}active{{end}}">
+          <a href="{{.RelPermalink}}">
+            {{ safeHTML .Params.Pre }}{{.Title}}{{ safeHTML .Params.Post }}
+          </a>
+          {{ if ne (len .Pages) 0 }}
+            <ul>
+              {{ range .Pages.ByWeight }}
+                <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .RelPermalink $currentNode.RelPermalink}}active{{end}}">
+                  <a href="{{.RelPermalink}}">
+                    {{ safeHTML .Params.Pre }}{{.Title}}{{ safeHTML .Params.Post }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </li>
       {{ end }}
     </ul>
 
@@ -19,43 +34,3 @@
     </section>
   </div>
 </nav>
-
-{{ define "section-tree-nav" }}
-  {{ $currentNode := .currentnode }}
-  {{ with .sect }}
-    {{ if .IsSection }}
-      {{ if .Params.hidden }}
-      {{ else }}
-        <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if .IsAncestor $currentNode}}parent{{end}} {{if eq .RelPermalink $currentNode.RelPermalink}}active{{end}} {{if .Params.alwaysopen}}parent{{end}}">
-          <a href="{{.RelPermalink}}">
-            {{ safeHTML .Params.Pre }}{{.Title}}{{ safeHTML .Params.Post }}
-          </a>
-          <ul>
-            {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
-            {{ if ne $numberOfPages 0 }}
-              {{ range .Pages }}
-                {{ if and .IsSection (not .Params.hidden) }}
-                  {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
-                {{ else if not .Params.hidden }}
-                  <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .RelPermalink $currentNode.RelPermalink}}active{{end}}">
-                    <a href="{{.RelPermalink}}">
-                      {{ safeHTML .Params.Pre }}{{.Title}}{{ safeHTML .Params.Post }}
-                    </a>
-                  </li>
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          </ul>
-        </li>
-      {{ end }}
-    {{ else }}
-      {{ if not .Params.hidden }}
-        <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .RelPermalink $currentNode.RelPermalink}}active{{end}}">
-          <a href="{{.RelPermalink}}">
-            {{ safeHTML .Params.Pre }}{{.Title}}{{ safeHTML .Params.Post }}
-          </a>
-        </li>
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
