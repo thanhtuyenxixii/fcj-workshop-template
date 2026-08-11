@@ -28,10 +28,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Fix Broken Hugo Theme Syntax
+      - name: Fix Hugo Learn Theme Compatibility
         run: |
           find themes/ -type f -name "*.html" -exec sed -i 's/<hugo>/hugo/g' {} + || true
-          find themes/ -type f -name "*.html" -exec sed -i 's/hugo.IsMultilingual/.IsMultilingual/g' {} + || true
+          find themes/ -type f -name "*.html" -exec sed -i 's/hugo\.IsMultilingual/\.Site\.IsMultilingual/g' {} + || true
+          find themes/ -type f -name "*.html" -exec sed -i 's/\.IsMultilingual/\.Site\.IsMultilingual/g' {} + || true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
