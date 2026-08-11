@@ -1,0 +1,61 @@
+<nav id="sidebar" class="{{if .Site.Params.showVisitedLinks}}showVisitedLinks{{end}}">
+  <div id="header-wrapper">
+    <div id="header">
+      {{ partial "header.html" . }}
+    </div>
+    {{ search.html . }}
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      {{ $currentNode := . }}
+      {{ range .Site.Home.Sections }}
+        {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+      {{ end }}
+    </ul>
+
+    <section id="footer">
+      {{ partial "menu-footer.html" . }}
+    </section>
+  </div>
+</nav>
+
+{{ define "section-tree-nav" }}
+  {{ $currentNode := .currentnode }}
+  {{ with .sect }}
+    {{ if .IsSection }}
+      {{ if .Params.hidden }}
+      {{ else }}
+        <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if .IsAncestor $currentNode}}parent{{end}} {{if eq .RelPermalink $currentNode.RelPermalink}}active{{end}} {{if .Params.alwaysopen}}parent{{end}}">
+          <a href="{{.RelPermalink}}">
+            {{ safeHTML .Params.Pre }}{{.Title}}{{ safeHTML .Params.Post }}
+          </a>
+          <ul>
+            {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
+            {{ if ne $numberOfPages 0 }}
+              {{ range .Pages }}
+                {{ if and .IsSection (not .Params.hidden) }}
+                  {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+                {{ else if not .Params.hidden }}
+                  <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .RelPermalink $currentNode.RelPermalink}}active{{end}}">
+                    <a href="{{.RelPermalink}}">
+                      {{ safeHTML .Params.Pre }}{{.Title}}{{ safeHTML .Params.Post }}
+                    </a>
+                  </li>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+    {{ else }}
+      {{ if not .Params.hidden }}
+        <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .RelPermalink $currentNode.RelPermalink}}active{{end}}">
+          <a href="{{.RelPermalink}}">
+            {{ safeHTML .Params.Pre }}{{.Title}}{{ safeHTML .Params.Post }}
+          </a>
+        </li>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
