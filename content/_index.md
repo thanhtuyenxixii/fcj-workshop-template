@@ -7,15 +7,11 @@ chapter: false
 
 # Internship Report
 
-## Student Information
-
-<img src="/images/student-avatar.png" alt="Chu Nguyễn Tuấn Anh" width="220">
-
 | Field | Information |
 |---|---|
-| Full name | Chu Nguyễn Tuấn Anh |
-| Phone | 0962037357 |
-| Email | anh.chunguyentuan@hcmut.edu.vn |
+| Full name |Bùi Thanh Tuyền |
+| Phone | 0387697447 |
+| Email | tuyen.bui2005@hcmut.edu.vn |
 | University | Ho Chi Minh City University of Technology , HCMUT |
 | Major | Computer Science |
 | Internship company | Amazon Web Services Viet Nam Company Limited |
