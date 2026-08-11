@@ -8,15 +8,15 @@ chapter: false
 # Internship Report
 
 | Field | Information |
-|---|---|
-| Full name |Bùi Thanh Tuyền |
+| --- | --- |
+| Full name | Bùi Thanh Tuyền |
 | Phone | 0387697447 |
-| Email | tuyen.bui2005@hcmut.edu.vn |
-| University | Ho Chi Minh City University of Technology , HCMUT |
+| Email | <tuyen.bui2005@hcmut.edu.vn> |
+| University | Ho Chi Minh City University of Technology, HCMUT |
 | Major | Computer Science |
 | Internship company | Amazon Web Services Viet Nam Company Limited |
 | Internship position | Workforce Bootcamp - First Cloud AI Journey |
-| Internship period | 01/06/2026-23/08/2026 |
+| Internship period | 01/06/2026 - 23/08/2026 |
 
 ## Project Topic
 
