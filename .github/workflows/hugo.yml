@@ -28,10 +28,20 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Build with Hugo Container
+      - name: Fix Broken Hugo Theme Syntax
         run: |
-          docker run --rm -v ${{ github.workspace }}:/src klakegg/hugo:0.85.0-ext-alpine \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+          find themes/ -type f -name "*.html" -exec sed -i 's/<hugo>/hugo/g' {} + || true
+          find themes/ -type f -name "*.html" -exec sed -i 's/hugo.IsMultilingual/.IsMultilingual/g' {} + || true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.118.2"
+          extended: true
+
+      - name: Build with Hugo
+        run: |
+          hugo --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
