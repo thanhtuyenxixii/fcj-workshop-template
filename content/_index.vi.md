@@ -8,15 +8,15 @@ chapter: false
 # Báo cáo thực tập
 
 | Mục | Thông tin |
-|---|---|
-| Họ tên | Bùi Thanh Tuyền  |
+| --- | --- |
+| Họ tên | Bùi Thanh Tuyền |
 | Số điện thoại | 0387697447 |
-| Email | tuyen.bui2005@hcmut.edu.vn |
-| Trường | Ho Chi Minh City University of Technology , HCMUT |
+| Email | <tuyen.bui2005@hcmut.edu.vn> |
+| Trường | Ho Chi Minh City University of Technology, HCMUT |
 | Chuyên ngành | Computer Science |
 | Công ty thực tập | Amazon Web Services Viet Nam Company Limited |
 | Vị trí thực tập | Workforce Bootcamp - First Cloud AI Journey |
-| Thời gian thực tập | 01/06/2026-23/08/2026 |
+| Thời gian thực tập | 01/06/2026 - 23/08/2026 |
 
 ## Tên đề tài
 
